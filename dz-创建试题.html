@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>创建试题</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+<link href="css/btn.css" rel="stylesheet">
+<link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+<link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+<link href="css/font.css" rel="stylesheet">
+<link rel="stylesheet" href="js/plugins/zTree/css/zTreeStyle.css" type="text/css">
+<link href="css/style.shxy.css" rel="stylesheet">
+<link href="css/douzi-style.css" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title"> <span class="title-icon"></span> <span class="title-font"> 创建试题 </span> <span class="Warning-info" ><img  src="img/Warning.png"> 请勿处理涉密信息！</span> </div>
+        <div class="ibox-content">
+          <!-- 新增按钮 -->
+          <ul class="m-t m-b-sm clearfix">  
+          <li class="col-sm-12 m-b-sm gray-line">
+          <button class="btn btn-mainColor pull-right" data-toggle="modal" data-target="#" type="button" onclick="location.href='dz-管理题库.html'"><i class="glyphicon glyphicon-edit m-r-xs"></i>&nbsp;管理题库</button>
+          <button class="btn btn-w-m btn-primary pull-right dz-mg-right" data-toggle="modal" data-target="#myImport" type="button"><i class="glyphicon glyphicon-save m-r-xs"></i>&nbsp;批量导入试题</button>
+          </li>
+        </ul>
+          <!-- 新增按钮-结束 -->
+          <form method="get" class="form-horizontal m-t-xl width-90 m-xl-a">
+            <div class="form-group m-b-lg" >
+              <label class="col-sm-1 control-label"><span class="red">*&nbsp;</span>试题类型</label>
+              <div class="col-sm-4">
+                <select class="form-control" name="account" id="type" onchange="handleChange()">
+                  <option value="1">单选题</option>
+                  <option value="2">多选题</option>
+                  <option value="3">判断</option>
+                  <option value="4">填空</option>
+                  <option value="5">问答</option>
+                </select>
+              </div>
+            </div>
+             <div class="form-group m-b-lg" >
+              <label class="col-sm-1 control-label"><span class="red">*&nbsp;</span>所属题库</label>
+              <div class="col-sm-4">
+                <select class="form-control" name="account">
+                  <option>题库一</option>
+                  <option>题库二</option>
+                  <option>题库三</option>
+                  <option>题库四</option>
+                  <option>题库五</option>
+                </select>
+              </div>
+            </div>
+             <div class="form-group m-b-lg" >
+              <label class="col-sm-1 control-label"><span class="red">*&nbsp;</span>题目</label>
+              <div class="col-sm-11">
+                <textarea type="text" class="form-control"></textarea>
+              </div>
+            </div>
+
+            <!-- 单选-选项设置 -->
+            <div class="form-group m-b-lg " >
+              <label class="col-sm-1 control-label"><span class="red">*&nbsp;</span>选项设置</label>
+              <div class="col-sm-11 clearfix">
+                <div class="dz-check-person">
+                <button class="btn btn-block btn-addColor dz-btn-width" data-toggle="modal" data-target="#" type="button"><i class="glyphicon glyphicon-plus"></i>&nbsp;添加选项</button>
+                </div>
+ <!-- 设置部分 -->
+             <div class="dz-select clearfix panel1 panel" style="display: block;">
+                  <div class="dz-box cleafix">
+                    <input class="magic-radio" type="radio" name="radio" id="r1" value="option1">
+                    <label for="r1">选项A</label>
+                    <div class="dz-select-text" ">
+                <textarea type="text" class="form-control" style="height:48px;"></textarea>
+                    </div>
+                    <div class="dz-delete">
+                      <a href=""><i class="ace-icon glyphicon glyphicon-remove red"></i></a>
+                    </div>
+                  </div>
+                  <div class="dz-box cleafix">
+                    <input class="magic-radio" type="radio" name="radio" id="r1" value="option1">
+                    <label for="r1">选项B</label>
+                    <div class="dz-select-text">
+                <textarea type="text" class="form-control"></textarea>
+                    </div>
+                    <div class="dz-delete">
+                      <a href=""><i class="ace-icon glyphicon glyphicon-remove red"></i></a>
+                    </div>
+                  </div>
+                  <div class="dz-box cleafix">
+                    <input class="magic-radio" type="radio" name="radio" id="r1" value="option1">
+                    <label for="r1">选项C</label>
+                    <div class="dz-select-text">
+                <textarea type="text" class="form-control"></textarea>
+                    </div>
+                    <div class="dz-delete">
+                      <a href=""><i class="ace-icon glyphicon glyphicon-remove red"></i></a>
+                    </div>
+                  </div>
+                  <div class="dz-box cleafix">
+                    <input class="magic-radio" type="radio" name="radio" id="r1" value="option1">
+                    <label for="r1">选项D</label>
+                    <div class="dz-select-text">
+                <textarea type="text" class="form-control"></textarea>
+                    </div>
+                    <div class="dz-delete">
+                      <a href=""><i class="ace-icon glyphicon glyphicon-remove red"></i></a>
+                    </div>
+                  </div>
+              </div>
+             <!-- 设置部分 -->
+              </div>
+            </div>
+            <!-- 单选-选项设置-结束 -->
+
+              <!-- 多选-选项设置 -->
+            <div class="form-group m-b-lg" style="display:none;">
+              <label class="col-sm-1 control-label"><span class="red">*&nbsp;</span>选项设置</label>
+              <div class="col-sm-11 clearfix">
+                <div class="dz-check-person">
+                <button class="btn btn-block btn-addColor dz-btn-width" data-toggle="modal" data-target="#" type="button"><i class="glyphicon glyphicon-plus"></i>&nbsp;添加选项</button>
+                </div>
+ <!-- 设置部分 -->
+             <div class="dz-select clearfix">
+                  <div class="dz-box cleafix">
+                    <input class="magic-radio" type="checkbox" name="radio" id="r1" value="option1">
+                    <label for="r1">选项A</label>
+                    <div class="dz-select-text" ">
+                <textarea type="text" class="form-control" style="height:48px;"></textarea>
+                    </div>
+                    <div class="dz-delete">
+                      <a href=""><i class="ace-icon glyphicon glyphicon-remove red"></i></a>
+                    </div>
+                  </div>
+                  <div class="dz-box cleafix">
+                    <input class="magic-radio" type="checkbox" name="radio" id="r1" value="option1">
+                    <label for="r1">选项B</label>
+                    <div class="dz-select-text">
+                <textarea type="text" class="form-control"></textarea>
+                    </div>
+                    <div class="dz-delete">
+                      <a href=""><i class="ace-icon glyphicon glyphicon-remove red"></i></a>
+                    </div>
+                  </div>
+                  <div class="dz-box cleafix">
+                    <input class="magic-radio" type="checkbox" name="radio" id="r1" value="option1">
+                    <label for="r1">选项C</label>
+                    <div class="dz-select-text">
+                <textarea type="text" class="form-control"></textarea>
+                    </div>
+                    <div class="dz-delete">
+                      <a href=""><i class="ace-icon glyphicon glyphicon-remove red"></i></a>
+                    </div>
+                  </div>
+                  <div class="dz-box cleafix">
+                    <input class="magic-radio" type="checkbox" name="radio" id="r1" value="option1">
+                    <label for="r1">选项D</label>
+                    <div class="dz-select-text">
+                <textarea type="text" class="form-control"></textarea>
+                    </div>
+                    <div class="dz-delete">
+                      <a href=""><i class="ace-icon glyphicon glyphicon-remove red"></i></a>
+                    </div>
+                  </div>
+              </div>
+             <!-- 设置部分 -->
+              </div>
+            </div>
+            <!-- 多选-选项设置-结束 -->
+            
+            <div class="form-group m-b-lg">
+              <label class="col-sm-1 control-label"></label>
+              <div class="col-sm-11 clearfix">
+                <div class="dz-check-person" >
+                
+                </div>
+						<div class="dz-select clearfix panel2 panel">
+							       <div class="dz-box cleafix">
+                    <input class="magic-radio" type="checkbox" name="radio" id="r1" value="option1">
+                    <label for="r1">选项A</label>
+                    <div class="dz-select-text" ">
+                <textarea type="text" class="form-control" style="height:48px;"></textarea>
+                    </div>
+                    <div class="dz-delete">
+                      <a href=""><i class="ace-icon glyphicon glyphicon-remove red"></i></a>
+                    </div>
+                  </div>
+                  <div class="dz-box cleafix">
+                    <input class="magic-radio" type="checkbox" name="radio" id="r1" value="option1">
+                    <label for="r1">选项B</label>
+                    <div class="dz-select-text">
+                <textarea type="text" class="form-control"></textarea>
+                    </div>
+                    <div class="dz-delete">
+                      <a href=""><i class="ace-icon glyphicon glyphicon-remove red"></i></a>
+                    </div>
+                  </div>
+                  <div class="dz-box cleafix">
+                    <input class="magic-radio" type="checkbox" name="radio" id="r1" value="option1">
+                    <label for="r1">选项C</label>
+                    <div class="dz-select-text">
+                <textarea type="text" class="form-control"></textarea>
+                    </div>
+                    <div class="dz-delete">
+                      <a href=""><i class="ace-icon glyphicon glyphicon-remove red"></i></a>
+                    </div>
+                  </div>
+                  <div class="dz-box cleafix">
+                    <input class="magic-radio" type="checkbox" name="radio" id="r1" value="option1">
+                    <label for="r1">选项D</label>
+                    <div class="dz-select-text">
+                <textarea type="text" class="form-control"></textarea>
+                    </div>
+                    <div class="dz-delete">
+                      <a href=""><i class="ace-icon glyphicon glyphicon-remove red"></i></a>
+                    </div>
+                  </div>
+						</div>
+						</div>
+            </div>
+         <!-- 判断-选项设置 -->
+            <div class="form-group m-b-lg panel3 panel" >
+              <label class="col-sm-1 control-label"><span class="red">*&nbsp;</span>选项设置</label>
+              <div class="col-sm-11 clearfix">
+ <!-- 设置部分 -->
+             <div class="dz-select clearfix">
+                  <div class="dz-judgment cleafix">
+                    <input class="magic-radio" type="radio" name="radio" id="r1" value="option1">
+                    <label for="r1">正确</label>
+                  </div>
+                  <div class="dz-judgment cleafix">
+                    <input class="magic-radio" type="radio" name="radio" id="r1" value="option1">
+                    <label for="r1">错误</label>
+                  </div>
+
+
+              </div>
+             <!-- 设置部分 -->
+              </div>
+            </div>
+            <!-- 判断-选项设置-结束 -->
+
+             <!-- 填空题-选项设置 -->
+            <div class="form-group m-b-lg panel4 panel" >
+              <label class="col-sm-1 control-label"><span class="red">*&nbsp;</span>选项设置</label>
+              <div class="col-sm-11 clearfix">
+                <div class="dz-check-person">
+                <button class="btn btn-block btn-addColor dz-btn-width" data-toggle="modal" data-target="#" type="button"><i class="glyphicon glyphicon-plus"></i>&nbsp;添加填空</button>
+                </div>
+ <!-- 设置部分 -->
+             <div class="dz-select clearfix">
+                  <div class="dz-pd cleafix">
+                    <label for="r1">1、</label>
+                    <div class="">
+                <input type="text" class="form-control dz-write">
+                    </div>
+                          <div class="dz-delete">
+                            <a href=""><i class="ace-icon glyphicon glyphicon-remove red"></i></a>
+                          </div>
+                   </div>
+                  <div class="dz-pd cleafix">
+                    <label for="r1">2、</label>
+                    <div class="">
+                <input type="text" class="form-control dz-write">
+                    </div>
+                          <div class="dz-delete">
+                            <a href=""><i class="ace-icon glyphicon glyphicon-remove red"></i></a>
+                          </div>
+                   </div>
+
+                         
+
+              </div>
+             <!-- 设置部分 -->
+              </div>
+            </div>
+            <!-- 填空题-选项设置-结束 -->
+
+ <!-- 问答题-选项设置 -->
+            <div class="form-group m-b-lg panel5 panel" >
+              <label class="col-sm-1 control-label"><span class="red">*&nbsp;</span>答案设置</label>
+              <div class="col-sm-11 clearfix">
+            <!-- 设置部分 -->
+            
+              <div class="col-sm-11 dz-ask-width">
+                <textarea type="text" class="form-control"></textarea>
+              </div>
+        
+            
+             <!-- 设置部分 -->
+              </div>
+            </div>
+  <!-- 问答题-选项设置-结束 -->
+
+            <div class="form-group m-b-lg " >
+              <label class="col-sm-1 control-label"><span class="red">*&nbsp;</span>题目解析</label>
+              <div class="col-sm-11">
+                <textarea type="text" class="form-control"></textarea>
+              </div>
+            </div>
+             <div class="form-group m-b-lg" >
+              <label class="col-sm-1 control-label"></label>
+              <div class="col-sm-11 ">
+                  <input type="radio" class="radio i-checks " name="reorder" value="option1"> <span class="orange">我已确认本通知不含涉密信息</span> 
+              </div>
+            </div>
+     
+            <div class="form-group">
+              <div class="col-sm-12 text-right">
+                <button type="button" class="btn btn-white" data-target="#">取消</button>
+                <button type="button" class="btn btn-mainColor">提交</button>
+              </div>
+            </div>
+           
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--选择部门显示弹窗-->
+<div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content animated fadeIn">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span> </button>
+        <!--<i class="fa fa-laptop modal-icon"></i>-->
+        <h4 class="modal-title">选择接收部门</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-7">
+            <div class="panel panel-grey">
+              <div class="panel-heading-search">              
+                <div class="input-group width-100">
+                  <div class="input-group-btn width-40 p-xxs-r  ">
+                    <select class="form-control " name="account" >
+             		<option>选择部门类型</option>
+              		<option>综合协调部门</option>
+              		<option>社会保障部门</option>
+              		<option>公共事务部门</option>
+              		<option>专业管理部门</option>
+              		<option>监督检查部门</option>
+                    </select>
+                  </div>
+                  <input type="text" placeholder="请输入部门名称" class="form-control ">
+                  <span class="icon-search-2" ></span> </div>
+              </div>
+             
+              <div class="panel-body panel-body-1">
+      
+                <div class="ztree-box col-sm-12 p-0">
+                  <div class="zTreeDemoBackground left">
+                    <div class="m-t-xs">
+                      <div class="check">
+                        <input type="checkbox" class="i-checks">
+                      </div>
+                      <div class="choose-object"> <span class="choose-all" >全 选</span> </div>
+                    </div>
+                    <ul id="treeDemo" class="ztree" style="height: 375px;">
+                    
+                    </ul>
+                    <div class="treeRightMenu"> </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="panel panel-grey">
+              <div class="panel-heading"><span class="bolder">已选(26) </span> <a class="btn btn-white btn-bitbucket pull-right p-s-3-6 color333 m-t--4 " data-toggle="modal" data-target="#myModal"><span class="blue2 f-w-600">清 空</span></a>
+              <a class="btn btn-white btn-bitbucket pull-right p-s-3-6 color333 m-t--4 m-r-xs " ><span class="blue2 f-w-600">排序</span></a>
+               </div>
+              <div class="panel-body panel-body-2">
+                <div>
+                  <ul class="Selected-personnel">
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      <div class="user-department width-90 width-90" title="省办公厅">省办公厅</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      <div class="user-department width-90" title="省办公厅">省办公厅</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      <div class="user-department width-90" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      <div class="user-department width-90" title="教育局">教育局</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      <div class="user-department width-90" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      <div class="user-department width-90" title="教育局">教育局</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      <div class="user-department width-90" title="省办公厅">省办公厅</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      <div class="user-department width-90" title="省办公厅">省办公厅</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      <div class="user-department width-90" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      <div class="user-department width-90" title="教育局">教育局</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      <div class="user-department width-90" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      <div class="user-department width-90" title="教育局">教育局</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      <div class="user-department width-90" title="省办公厅">省办公厅</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      <div class="user-department width-90" title="省办公厅">省办公厅</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      <div class="user-department width-90" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      <div class="user-department width-90" title="教育局">教育局</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      <div class="user-department width-90" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      <div class="user-department width-90" title="教育局">教育局</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-white" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-mainColor demo1" data-dismiss="modal" id="showtoast2">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--选择部门显示弹窗 END--> 
+
+<!--选择接收人显示弹窗-->
+<div class="modal inmodal" id="myModal3" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content animated fadeIn">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span> </button>
+        <!--<i class="fa fa-laptop modal-icon"></i>-->
+        <h4 class="modal-title">选择接收人</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-7">
+            <div class="panel panel-grey">
+              <div class="panel-heading-search">
+                <div class="input-group width-100">
+                  <div class="input-group-btn width-30 p-xxs-r">
+                    <select class="form-control " name="account" style="padding: 6px 8px;">
+                      <option>部门</option>
+                      <option>姓名</option>
+                    </select>
+                  </div>
+                  <input type="text" class="form-control">
+                  <span class="icon-search-2" style=""></span> </div>
+              </div>
+              <div class="panel-body panel-body-1">
+                <div class="ztree-box col-sm-7 p-0">
+                  <div class="zTreeDemoBackground left">
+                    <ul id="treeDemo1" class="ztree" style="height: 375px;">
+                    </ul>
+                    <div class="treeRightMenu"> </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="col-sm-5 no-padding">
+                  <div class="choose-content">
+                    <div class="choose-item">
+                      <div class="check">
+                        <input type="checkbox" class="i-checks">
+                      </div>
+                      <div class="choose-object"> <span class="choose-all">全 选</span> </div>
+                      <div class="hr-line-solid m-b-none m-t-xs"></div>
+                      <!--<button class="btn btn-mainColor btn-bitbucket" type="button">全 选</button>--> 
+                    </div>
+                    <div class="choose-item">
+                      <div class="check">
+                        <input type="checkbox" class="i-checks">
+                      </div>
+                      <div class="choose-object"> <span class="two-letters">李 四</span> </div>
+                    </div>
+                    <div class="choose-item">
+                      <div class="check">
+                        <input type="checkbox" class="i-checks">
+                      </div>
+                      <div class="choose-object"> <span class="more-letters">孙悟空</span> </div>
+                    </div>
+                    <div class="choose-item">
+                      <div class="check">
+                        <input type="checkbox" class="i-checks">
+                      </div>
+                      <div class="choose-object"> <span class="more-letters">唐三藏就</span> </div>
+                    </div>
+                    <div class="choose-item">
+                      <div class="check">
+                        <input type="checkbox" class="i-checks">
+                      </div>
+                      <div class="choose-object"> <span class="more-letters">沙和尚</span> </div>
+                    </div>
+                    <div class="choose-item">
+                      <div class="check">
+                        <input type="checkbox" class="i-checks">
+                      </div>
+                      <div class="choose-object"> <span class="more-letters">猪八戒</span> </div>
+                    </div>
+                    <div class="choose-item">
+                      <div class="check">
+                        <input type="checkbox" class="i-checks">
+                      </div>
+                      <div class="choose-object"> <span class="more-letters">流沙河</span> </div>
+                    </div>
+                    <div class="choose-item">
+                      <div class="check">
+                        <input type="checkbox" class="i-checks">
+                      </div>
+                      <div class="choose-object"> <span class="more-letters">流沙河</span> </div>
+                    </div>
+                    <div class="choose-item">
+                      <div class="check">
+                        <input type="checkbox" class="i-checks">
+                      </div>
+                      <div class="choose-object"> <span class="more-letters">流沙河</span> </div>
+                    </div>
+                    <div class="choose-item">
+                      <div class="check">
+                        <input type="checkbox" class="i-checks">
+                      </div>
+                      <div class="choose-object"> <span class="more-letters">流沙河</span> </div>
+                    </div>
+                    <div class="choose-item">
+                      <div class="check">
+                        <input type="checkbox" class="i-checks">
+                      </div>
+                      <div class="choose-object"> <span class="more-letters">流沙河</span> </div>
+                    </div>
+                    <div class="choose-item">
+                      <div class="check">
+                        <input type="checkbox" class="i-checks">
+                      </div>
+                      <div class="choose-object"> <span class="more-letters">流沙河</span> </div>
+                    </div>
+                    <div class="choose-item">
+                      <div class="check">
+                        <input type="checkbox" class="i-checks">
+                      </div>
+                      <div class="choose-object"> <span class="more-letters">流沙河</span> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="panel panel-grey">
+              <div class="panel-heading"><span class="bolder">已选 (20) 人</span> <a class="btn btn-white btn-bitbucket pull-right p-s-3-6 color333 m-t--4 " data-toggle="modal" data-target="#myModal"><span class="blue2 f-w-600">清 空</span></a> 
+              <a class="btn btn-white btn-bitbucket pull-right p-s-3-6 color333 m-t--4 m-r-xs " ><span class="blue2 f-w-600">排序</span></a></div>
+              <div class="panel-body panel-body-2">
+                <div>
+                  <ul class="Selected-personnel">
+                    <li class="li-item"> <i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+                      <div class="two-letters-name" title="李四">李四</div>
+                      <div class="user-department" title="省办公厅">省办公厅</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+                      <div class="more-letters-name" title="孙悟空">孙悟空</div>
+                      <div class="user-department" title="省办公厅">省办公厅</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+                      <div class="more-letters-name" title="猪八戒好啊">猪八戒好啊</div>
+                      <div class="user-department" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+                      <div class="two-letters-name" title="唐僧">唐僧</div>
+                      <div class="user-department" title="教育局">教育局</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+                      <div class="more-letters-name" title="猪八戒好">猪八戒好</div>
+                      <div class="user-department" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+                      <div class="two-letters-name" title="唐僧">唐僧</div>
+                      <div class="user-department" title="教育局">教育局</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+                      <div class="two-letters-name" title="李四">李四</div>
+                      <div class="user-department" title="省办公厅">省办公厅</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+                      <div class="more-letters-name" title="孙悟空">孙悟空</div>
+                      <div class="user-department" title="省办公厅">省办公厅</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+                      <div class="more-letters-name" title="猪八戒好啊">猪八戒好啊</div>
+                      <div class="user-department" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+                      <div class="two-letters-name" title="唐僧">唐僧</div>
+                      <div class="user-department" title="教育局">教育局</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+                      <div class="more-letters-name" title="猪八戒好">猪八戒好</div>
+                      <div class="user-department" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+                      <div class="two-letters-name" title="唐僧">唐僧</div>
+                      <div class="user-department" title="教育局">教育局</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+                      <div class="two-letters-name" title="李四">李四</div>
+                      <div class="user-department" title="省办公厅">省办公厅</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+                      <div class="more-letters-name" title="孙悟空">孙悟空</div>
+                      <div class="user-department" title="省办公厅">省办公厅</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+                      <div class="more-letters-name" title="猪八戒好啊">猪八戒好啊</div>
+                      <div class="user-department" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+                      <div class="two-letters-name" title="唐僧">唐僧</div>
+                      <div class="user-department" title="教育局">教育局</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+                      <div class="more-letters-name" title="猪八戒好">猪八戒好</div>
+                      <div class="user-department" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+                      <div class="two-letters-name" title="唐僧">唐僧</div>
+                      <div class="user-department" title="教育局">教育局</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-white" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-mainColor demo1" data-dismiss="modal" id="showtoast2">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--选择接收人显示弹窗 END-->
+<!-- 批量导入-弹窗 -->
+<div class="modal inmodal in" id="myImport" tabindex="-1" role="dialog" aria-hidden="true" style="display: none; padding-right: 6px;">
+      <div class="modal-dialog-600">
+        <div class="modal-content animated fadeIn">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span> </button>
+            <!--<i class="fa fa-laptop modal-icon"></i>-->
+            <h4 class="modal-title">批量导入试题</h4>
+            <!--<small class="font-bold">这里可以显示副标题。</small>-->
+          </div>
+          <div class="modal-body">
+            <div class="modal-content-m">
+              <form method="get" class="form-horizontal">
+                <div class="form-group">
+                  <label class="col-sm-2 control-label"><span class="red">*&nbsp;</span>题库模板</label>
+                  <div class="col-sm-10">
+                    <button class="btn btn-info " type="button"><i class="glyphicon glyphicon-save m-r-xs"></i>点击下载</button>
+                    <p class="dz-fl">请下载模板，并按照格式填写，填写完成后，上传文件即可完成导入</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label"><span class="red">*&nbsp;</span>所属题库</label>
+                  <div class="col-sm-10">
+                    <select class="form-control" name="account">
+                      <option>题库一</option>
+                      <option>题库二</option>
+                    </select>
+                  </div>
+                </div>
+                   <div class="form-group">
+                  <label class="col-sm-2 control-label"><span class="red">*&nbsp;</span>选择文件</label>
+                  <div class="col-sm-10">
+                    <button class="btn btn-addColor " type="button">&nbsp;&nbsp;选择文件&nbsp;&nbsp;</button>
+                    <p class="dz-fl">未选择文件&nbsp;&nbsp;</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-mainColor demo1" data-dismiss="modal">提交</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- 创建题库-弹窗 -->
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>
+<script src="js/content.min.js?v=1.0.0"></script>
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="js/plugins/chosen/chosen.jquery.js"></script>
+<script type="text/javascript" src="js/plugins/zTree/js/jquery.ztree.core.js"></script>
+<script>
+		$(document).ready(function() {
+			$(".i-checks").iCheck({
+				checkboxClass: "icheckbox_square-mainColor",
+				radioClass: "iradio_square-mainColor",
+			})
+		});
+		function handleChange(){
+			var value = $("#type").val();
+			$(".panel").hide();
+			console.info("panel"+value);
+			$(".panel"+value).show();
+		}
+	</script>
+<script>
+$(document).ready(function(){
+  $("#addenclosure").click(function(){
+    $("#enclosure").fadeIn();
+  });
+});
+</script>
+<SCRIPT type="text/javascript">
+		//	    ztree树结构
+		var curMenu = null,
+			zTree_Menu = null;
+		var setting = {
+			check: {
+				enable: true
+			},
+			view: {
+				showLine: false,
+				showIcon: false,
+				selectedMulti: false,
+				dblClickExpand: false,
+				addDiyDom: addDiyDom
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeClick: beforeClick
+			}
+		};
+
+		var zNodes = [{
+				id: 1,
+				pId: 0,
+				name: "陕西省",
+				open: true
+			},
+			{
+				id: 11,
+				pId: 1,
+				name: "省政府办公厅"
+			},
+			{
+				id: 12,
+				pId: 1,
+				name: "省开发委"
+			},
+			{
+				id: 13,
+				pId: 1,
+				name: "省教育厅"
+			},
+			{
+				id: 111,
+				pId: 12,
+				name: "陕西省体育局"
+			},
+			{
+				id: 112,
+				pId: 13,
+				name: "陕西省民政局"
+			},
+			{
+				id: 113,
+				pId: 11,
+				name: "陕西省卫生局"
+			},
+			{
+				id: 114,
+				pId: 113,
+				name: "陕西省教育局"
+			},
+			{
+				id: 3,
+				pId: 0,
+				name: "西安市碑林区"
+			},
+			{
+				id: 31,
+				pId: 3,
+				name: "碑林区区政府"
+			},
+			{
+				id: 32,
+				pId: 3,
+				name: "碑林区民政局"
+			}
+		];
+
+		function addDiyDom(treeId, treeNode) {
+			var spaceWidth = 5;
+			var switchObj = $("#" + treeNode.tId + "_switch"),
+				icoObj = $("#" + treeNode.tId + "_ico");
+			switchObj.remove();
+			icoObj.before(switchObj);
+
+			if(treeNode.level > 1) {
+				var spaceStr = "<span style='display: inline-block;width:" + (spaceWidth * treeNode.level) + "px'></span>";
+				switchObj.before(spaceStr);
+			}
+		}
+
+		function beforeClick(treeId, treeNode) {
+			if(treeNode.level == 0) {
+				var zTree = $.fn.zTree.getZTreeObj("treeDemo1");
+				zTree.expandNode(treeNode);
+				return false;
+			}
+			return true;
+		}
+
+		function beforeClick(treeId, treeNode) {
+			if(treeNode.level == 0) {
+				var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+				zTree.expandNode(treeNode);
+				return false;
+			}
+			return true;
+		}
+		$(document).ready(function() {
+			var treeObj = $("#treeDemo1");
+			$.fn.zTree.init(treeObj, setting, zNodes);
+			zTree_Menu = $.fn.zTree.getZTreeObj("treeDemo1");
+			curMenu = zTree_Menu.getNodes()[0].children[0].children[0];
+			zTree_Menu.selectNode(curMenu);
+
+			treeObj.hover(function() {
+				if(!treeObj.hasClass("showIcon")) {
+					treeObj.addClass("showIcon");
+				}
+			}, function() {
+				treeObj.removeClass("showIcon");
+			});
+		});
+
+		$(document).ready(function() {
+			var treeObj = $("#treeDemo");
+			$.fn.zTree.init(treeObj, setting, zNodes);
+			zTree_Menu = $.fn.zTree.getZTreeObj("treeDemo");
+			curMenu = zTree_Menu.getNodes()[0].children[0].children[0];
+			zTree_Menu.selectNode(curMenu);
+
+			treeObj.hover(function() {
+				if(!treeObj.hasClass("showIcon")) {
+					treeObj.addClass("showIcon");
+				}
+			}, function() {
+				treeObj.removeClass("showIcon");
+			});
+		});
+		//		ztree树结构 END
+
+		//     悬停显示
+		$(document).ready(function() {
+			$("#role_more li").hover(
+				function() {
+					$(this).addClass("hover").find("div.role_hidebox").show();
+				},
+
+				function() {
+					$(this).removeClass("hover").find("div.role_hidebox").hide();
+				}
+			);
+		});
+		//		悬停显示 END
+	</SCRIPT>
+<SCRIPT>
+		//          sweetalert弹窗
+			$(document).ready(function() {
+			$(".demo1").click(function() {
+				$(".showSweetAlert .confirm").attr("display", "none!important");
+				swal({
+					title: "添加成功！",
+					type: "success",
+					showConfirmButton: false,
+	                timer: 1500
+					//					confirmButtonText: "完成"
+				});
+				time();
+			});
+$(".demo2").click(function() {
+				$(".showSweetAlert .confirm").attr("display", "none!important");
+				swal({
+					title: "提交成功！",
+					type: "success",
+					showConfirmButton: false,
+	                timer: 1500
+					//					confirmButtonText: "完成"
+				});
+				time();
+			});
+			
+			})
+
+		
+//		sweetalert弹窗
+
+</SCRIPT>	
+<script src="js/plugins/layer/laydate/laydate.js"></script>
+<script>
+        laydate({elem:"#hello",event:"focus"});var start={elem:"#start",format:"YYYY/MM/DD hh:mm:ss",min:laydate.now(),max:"2099-06-16 23:59:59",istime:true,istoday:false,choose:function(datas){end.min=datas;end.start=datas}};var end={elem:"#end",format:"YYYY/MM/DD hh:mm:ss",min:laydate.now(),max:"2099-06-16 23:59:59",istime:true,istoday:false,choose:function(datas){start.max=datas}};laydate(start);laydate(end);
+    </script>
+</html>

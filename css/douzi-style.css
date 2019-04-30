@@ -1,0 +1,478 @@
+@charset:"utf-8";
+
+/*创建课程-新增样式*/
+
+.dz-check-person{
+	width:120px; 
+}
+.dz-check-person .Additions-b{
+
+}
+.dz-check-person .dz-btn-width{
+   width: 120px;
+}
+.dz-f-left{
+	float: left;
+}
+.dz-t-width{
+	
+}
+.dz-t-width textarea{
+	width: 100%;
+}
+
+/*草稿箱*/
+.dz-col-sm-7{
+	width: 18%;
+}
+.dz-col-sm-4{
+	width: 100%;
+	float: left;
+	margin-left: 5%;
+}
+
+/*已创建课程详情*/
+.dz-learn{
+	text-align: center;
+	padding: 35px 0;
+}
+/*我的课程*/
+.dz-content{
+	width: 100%;
+}
+.dz-col-sm-6{
+	width: 100%;
+}
+.dz-my-class{
+	float: left;
+	width: 100%;
+}
+.dz-my-class li{
+	width: 23%;
+	float: left;
+	margin: 10px 1%;
+	background: #e1ebfa;
+	padding: 30px 45px;
+	color: #51677e;
+	position: relative;
+	box-sizing: border-box;
+}
+.dz-my-class li h3{
+	line-height: 28px;
+}
+.dz-my-class li p{
+	line-height: 26px;
+
+}
+.dz-my-class li .dz-position{
+	position: absolute;
+	right: -25px;
+	top: -15px;
+}
+.dz-my-class li:hover{
+	background: #c9d9f0;
+	cursor: pointer;
+}
+/*我的课程*/
+.dz-releative{
+	position: relative;
+}
+.dz-find{
+	position: absolute;
+	right: 20px;
+}
+.dz-title{
+	width: 100%;
+	font-size: 16px;
+	font-weight: bold;
+	height: 56px;
+	line-height: 28px;
+	overflow: hidden;
+    margin-bottom: 10px;
+}
+/*创建试题*/
+.dz-select{
+	display: block;
+}
+.dz-box{
+	float: left;
+	width: 100%;
+	position: relative;
+	line-height: 120px;
+}
+.dz-select .magic-radio{
+	float: left;
+	display: inline-block;
+	width: 3%;
+	text-align: left;
+	margin-top: 55px;
+
+}
+.dz-box label{
+	float: left;
+	width: 5%;
+	height: 120px;
+	margin-top: 15px;
+}
+
+.dz-select input[type="radio"] {
+    border: 1px solid #3ba4f5;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    background: white;
+    -webkit-appearance: none;
+    -webkit-border-radius: 2px;
+    border-radius: 50% !important;
+    vertical-align: middle;
+    color: #fff;
+    transition: all 0.1s linear;
+    cursor: pointer;
+    position: relative;
+    top: 65px;
+    right: 10px;
+    outline: none;
+  }
+
+  .dz-select input[type="radio"]:before {
+    content: "✔";
+    font-size: 7px;
+    position: absolute;
+    right: 5px;
+    top: 2px;
+  }
+
+
+  .dz-select input[type="radio"]:checked {
+    background: #3ba4f5;
+    border: none;
+    color: #fff;
+  }
+  
+  .dz-select input[type="checkbox"] {
+    border: 1px solid #3ba4f5;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    background: white;
+    -webkit-appearance: none;
+    -webkit-border-radius: 2px;
+    border-radius: 50% !important;
+    vertical-align: middle;
+    color: #fff;
+    transition: all 0.1s linear;
+    cursor: pointer;
+    position: relative;
+    top: 65px;
+    right: 10px;
+    outline: none;
+  }
+
+  .dz-select input[type="checkbox"]:before {
+    content: "✔";
+    font-size: 7px;
+    position: absolute;
+    right: 5px;
+    top: 2px;
+  }
+
+
+  .dz-select input[type="checkbox"]:checked {
+    background: #3ba4f5;
+    border: none;
+    color: #fff;
+  }
+
+.dz-select-text{
+	float: left;
+	width: 92%;
+	box-sizing: border-box;
+	margin: 10px 0;
+}
+.dz-delete{
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	top: 12px;
+	right: -20px;
+	
+}
+.dz-judgment{
+	float: left;
+	width: 100%;
+	position: relative;
+	line-height: 40px;
+}
+.dz-judgment label{
+	float: left;
+	width: 5%;
+	height: 40px;
+}
+.dz-judgment .magic-radio{
+	float: left;
+	display: inline-block;
+	width: 3%;
+	text-align: left;
+	margin-top: 14px;
+
+}
+
+.dz-judgment input[type="radio"] {
+    border: 1px solid #3ba4f5;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    background: white;
+    -webkit-appearance: none;
+    -webkit-border-radius: 2px;
+    border-radius: 50% !important;
+    vertical-align: middle;
+    color: #fff;
+    transition: all 0.1s linear;
+    cursor: pointer;
+    position: relative;
+    top: 9px;
+    right: 10px;
+    margin-left: 10px;
+    outline: none;
+  }
+
+  .dz-judgment input[type="radio"]:before {
+    content: "✔";
+    font-size: 7px;
+    position: absolute;
+    right: 5px;
+    top: 2px;
+  }
+
+
+.dz-judgment input[type="radio"]:checked {
+    background: #3ba4f5;
+    border: none;
+    color: #fff;
+  }
+
+.dz-mg-right{
+	margin-right: 10px;
+}
+.dz-write{
+	float: left;
+	width: 98%;
+	box-sizing: border-box;
+	margin: 10px 0;
+	height: 36px;
+
+}
+.dz-pd{
+    float: left;
+	width: 100%;
+	position: relative;
+	line-height: 36px;
+	height: 36px;
+	margin-bottom: 10px;
+}
+.dz-pd label{
+	display: inline-block;
+	float: left;
+	width: 2%;
+	line-height: 50px;
+	margin-bottom: 0;
+}
+.dz-ask-width{
+	width: 100%;
+	padding: 0;
+}
+.dz-fl{
+	float: left;
+	line-height: 32px;
+	color: #999;
+}
+.dz-mlft{
+	margin-left: -7px!important;
+	margin-right: -7px!important;
+}
+.dz-padding{
+	padding-top: 15px;
+	padding-bottom: 35px;
+}
+.dz-set{
+	width: 50%;
+}
+.dz-left-width{
+	width: 100%;
+}
+.dz-bg{
+    background: #e3eaf4;
+    padding: 25px;
+}
+/*试卷配置*/
+.dz-pclosed{
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+/*考试详情*/
+.dz-detail{
+	padding: 20px;
+}
+.dz-detail ul li{
+ line-height: 36px;
+ font-size: 14px;
+}
+.dz-detail ul li span{
+	margin-left: 15px;
+/*	color: #37aeeb;*/
+}
+
+/*批改试卷*/
+.dz-table{
+	width: 100%;
+	border-collapse:collapse;
+	margin-bottom: 20px;
+}
+.dz-table td,.dz-table th{
+	border:1px solid #ddd;
+    line-height: 32px;
+    font-weight: normal;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.dz-nub{
+	width: 7%;
+	background: #36aeea;
+	text-align: center;
+	color: #fff;
+}
+.dz-score{
+	width: 7%;
+	background: #e3eaf4;
+	text-align: center;
+	color: #51677e;
+
+}
+.dz-tit{
+	line-height: 36px;
+}
+.dz-border{
+	border: 0;
+}
+/*批改后的试卷详情
+*/
+.dz-tb-title td{
+	border: 0;
+	text-align: center;
+	/*line-height: 36px;*/
+}
+.dz-tb-title tr:nth-child(2n+1){
+	background: #e3eaf4;
+	
+}
+.dz-tb-title tr:nth-child(2n+1) td{
+	font-weight: bold;
+	font-size: 14px;
+}
+.dz-titnub table{
+	width: 100%;
+}
+.dz-titnub table td{
+	width: 40px;
+     line-height: 32px;
+     text-align: center;
+     border: 1px solid #ddd;
+
+}
+.dz-titnub table .dz-td-title{
+	background: #e3eaf4;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	text-align: center;
+	color: #51677e;
+	font-weight: bold;
+}
+
+/*我的考试*/
+.dz-attributes{
+	line-height: 32px;
+}
+/*考试页面*/
+.dz-countdown{
+	font-size: 24px;
+	line-height: 48px;
+	font-weight:bolder;
+	background: #1ab394;
+	color: #fff;
+}
+.dz-fixed{
+	position: fixed;
+	right: 10px;
+}
+.dz-submit{
+	text-align: right;
+	margin-top: 15px;
+}
+.dz-submit-width{
+	width: 25%;
+}
+.dz-table td ul li{
+	line-height: 48px;
+	padding-left: 15px;
+	height: 48px;
+}
+.dz-table td ul{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.dz-table td ul li span{
+	margin-left: 15px;
+}
+.dz-table td ul li input{
+	float: left;
+	margin-top:18px;
+}
+
+.dz-table td ul li input[type="radio"] {
+    border: 1px solid #3ba4f5;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    background: white;
+    -webkit-appearance: none;
+    -webkit-border-radius: 2px;
+    border-radius: 50% !important;
+    vertical-align: middle;
+    color: #fff;
+    transition: all 0.1s linear;
+    cursor: pointer;
+    position: relative;
+    top: 13px;
+    right: 0px;
+    outline: none;
+  }
+
+  .dz-table td ul li input[type="radio"]:before {
+    content: "✔";
+    font-size: 7px;
+    position: absolute;
+    right: 5px;
+    top: 2px;
+  }
+
+
+  .dz-table td ul li input[type="radio"]:checked {
+    background: #3ba4f5;
+    border: none;
+    color: #fff;
+  }
+  /*.panel{
+  	display: none;
+  }*/

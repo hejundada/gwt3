@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>考试页面</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+<link href="css/btn.css" rel="stylesheet">
+<link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+<link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+<link href="css/style.shxy.css" rel="stylesheet">
+<link href="css/font.css" rel="stylesheet">
+<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+<link rel="stylesheet" href="js/plugins/zTree/css/zTreeStyle.css" type="text/css">
+<link href="css/douzi-style.css" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+  <!--<div class="row">
+    <div class="nav-area"> <i class="fa fa-home nav-icon"></i> <a href="index.html" class="nav-link">首页</a> <span class="nav-break">>></span> <span class="nav-position">云盘</span> </div>
+  </div>-->
+  <div class="row">
+<!--     左边内容 -->
+     <div class="col-sm-9">
+      <div class="ibox float-e-margins animated fadeInRight">
+        <div class="ibox-title" ><span class="title-icon"></span> <span class="title-font" >正在考试</span>
+             </div>
+        <div class="ibox-content">
+<!-- 标题 -->
+<div class="text-center article-title m-b-sm">
+            <div id="signUp2" class="signUp"><img class="animated animation_select" src="img/sign.png">
+              <p class="m-t--25">郭桂峰</p>
+              <p>2017-10-23 12:23 </p>
+            </div>
+            <div id="refuse-signUp" class="signUp"><img class="animated animation_select" src="img/refuse-sign.png">
+              <p class="m-t--25">郭桂峰</p>
+              <p>2017-10-23 12:23 </p>
+            </div>
+            <h2>测试部第一次测试</h2>
+          </div>
+<!-- 标题-结束 -->
+<!-- 考试时长 -->
+<div class="source">
+            <span class="m-sm">考试时长：120分钟</span> 
+            <time class="m-sm">2017-11-18 &nbsp;16:00</time>
+
+          </div>
+<!-- 考试时长-结尾 -->
+<!-- 表格-内容 -->
+<div class="dz-content">
+         <h4 class="dz-tit">一、单项选择题（本大题共有10道小题，每个小题需要文字描述答案，根据标准答案酌情给分，每道题2分）</h4>
+           <table class="dz-table">
+            <thead>
+            <tr>
+             <th class="dz-nub">1</th> <th>根据下列情况选择发送系统消息的机制</th>
+             </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td colspan="2">
+             <ul>
+               <li><input class="magic-radio" type="radio" name="radio" id="r1" value="option1"><span>A、不知道</span></li>
+               <li><input class="magic-radio" type="radio" name="radio" id="r1" value="option2"><span>B、不知道</span></li>
+               <li><input class="magic-radio" type="radio" name="radio" id="r1" value="option3"><span>C、不知道</span></li>
+               <li><input class="magic-radio" type="radio" name="radio" id="r1" value="option4"><span>D、不知道</span></li>
+             </ul>
+            </td>
+            </tr>
+            <tr>
+            <td colspan="2">
+             <b>正确答案：</b>A
+            </td>
+            </tr>
+            <tr>
+            <td colspan="2">
+             <b>试题解析：</b>杜绝了类似安卓那种为了接受通知不停在后台唤醒程序保持长连接的行文，由IOS系统和APNS进行长
+            </td>
+            </tr>
+            </tbody>
+           </table>
+    <!-- 上一题按钮 -->
+           <div class="form-group dz-padding">
+              <div class="col-sm-12 text-right">
+               <button type="button" class="btn btn-w-m btn-white">上一题</button>
+               <button type="button" class="btn btn-w-m btn-white">下一题</button>
+              </div>
+            </div>
+    <!-- 上一题按钮 -->
+          </div>
+<!-- 表格-内容-结束 -->
+           
+        </div>
+      </div>
+    </div>
+<!-- 左边内容 -->
+    <div class="col-sm-3 dz-fixed">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content dz-titnub">
+           <table>
+            <tr><td colspan="10" class="dz-countdown">1:23:25</td></tr>
+             <tr>
+               <td colspan="10" class="dz-td-title">单选题</td>
+             </tr>
+             <tr>
+               <td>1</td>
+               <td>2</td>
+               <td>3</td>
+               <td>4</td>
+               <td>5</td>
+               <td class="bg-danger">6</td>
+               <td class="bg-danger">7</td>
+               <td class="bg-danger">8</td>
+               <td>9</td>
+               <td>10</td>     
+             </tr>
+             <tr>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+             </tr>
+             <tr>
+               <td colspan="10" class="dz-td-title">判断题</td>
+             </tr>
+             <tr>
+               <td>1</td>
+               <td class="bg-danger">2</td>
+               <td class="bg-danger">3</td>
+               <td>4</td>
+               <td>5</td>
+               <td>6</td>
+               <td>7</td>
+               <td class="bg-danger">8</td>
+               <td>9</td>
+               <td>10</td>
+             </tr>
+             <tr>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td >14</td>
+            <td>15</td>
+             </tr>
+             <tr>
+               <td colspan="10" class="dz-td-title">问答题</td>
+             </tr>
+             <tr>
+               <td>1</td>
+               <td>2</td>
+               <td>3</td>
+               <td>4</td>
+               <td>5</td>
+               <td>6</td>
+               <td>7</td>
+               <td>8</td>
+               <td class="bg-danger">9</td>
+               <td class="bg-danger">10</td>
+
+             </tr>
+             <tr>
+            <td class="bg-danger">11</td>
+            <td class="bg-danger">12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+             </tr>
+           </table>
+          <div class="dz-submit">
+           <button type="button" class="btn btn-mainColor demo2 dz-submit-width">提交</button>
+           </div>
+        </div>
+      </div>
+    </div>
+ 
+
+  
+
+
+<!--选择移动路径显示弹窗-->
+<div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content animated fadeIn">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span> </button>
+        <h4 class="modal-title">移动到</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="ztree-box col-sm-12 p-0">
+              <div class="zTreeDemoBackground left">
+                <ul id="treeDemo" class="ztree" style="height: 375px;">
+                </ul>
+                <div class="treeRightMenu"> </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+         <button type="button" class="btn btn-mainColor pull-left" data-dismiss="modal">新建文件夹</button>
+        <button type="button" class="btn btn-white" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-mainColor demo5" data-dismiss="modal">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--选择移动路径显示弹窗 END-->
+
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>
+<script src="js/content.min.js?v=1.0.0"></script>
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/plugins/iCheck/icheck.min.js"></script><!--单选多选-->
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="js/plugins/sweetalert/promise.js"></script><!--sweetalert2.0 IE 兼容-->
+<script src="js/plugins/layer/layer.min.js"></script> 
+<script src="js/plugins/chosen/chosen.jquery.js"></script>
+<script type="text/javascript" src="js/plugins/zTree/js/jquery.ztree.core.js"></script>
+<script>
+		$(document).ready(function() {
+			$(".i-checks").iCheck({
+				checkboxClass: "icheckbox_square-mainColor",
+				radioClass: "iradio_square-mainColor",
+			})
+		});
+	</script>
+<script>
+		
+
+//      sweetalert弹窗
+	
+$(document).ready(function() {
+	$(".demo1").click(function() {
+				 event.stopPropagation();
+		swal({
+  title: '请输入新建文件夹名称',
+  input: 'text',
+  showCancelButton: true,
+  inputValidator: function(value) {
+    return new Promise(function(resolve, reject) {
+      if (value) {
+        resolve();
+      } else {
+        reject('请输入文件夹名称，此为必填项！');
+      }
+    });
+  }
+}).then(function(result) {
+  if (result) {
+    swal({
+      type: 'success',
+	  title: "添加成功",
+		 showConfirmButton: false,
+	  timer: 1500
+      });
+  }
+})
+				
+			});
+	
+	$(".demo3").click(function() {
+				 event.stopPropagation();
+		// inputOptions can be an object or Promise
+var inputOptions = new Promise(function(resolve) {
+  setTimeout(function() {
+    resolve({
+      '#ff0000': '涉密信息',
+      '#00ff00': '非法信息',
+      '#0000ff': '其它'
+    });
+  });
+});
+swal({
+  title: '举报信息',
+  text: '请选择举报类型',
+  input: 'radio',
+  inputOptions: inputOptions,
+	html: '<input id="swal-input2" type="textarea" placeholder="请输入举报原因" class="swal2-textarea">',
+  inputValidator: function(result) {
+    return new Promise(function(resolve, reject) {
+      if (result) {
+        resolve();
+      } else {
+        reject('请选择举报类型!');
+      }
+    });
+  }
+}) /*.then(function(result) {
+  if (result) {
+    swal({
+		title: '举报原因',
+      input: 'textarea',
+  showCancelButton: true
+    });
+  }
+})*/ .then(function(result) {
+  if (result) {
+    swal({
+      type: 'success',
+      text: '举报成功！'
+    });
+  }
+})
+});
+	
+	$(".demo4").click(function() {
+				 event.stopPropagation();
+				swal({
+                        title: "您确定要删除吗？",
+						text: "删除后将无法恢复，请谨慎操作！",
+						type: "warning",
+						showCancelButton: true,
+						confirmButtonColor: "#DD6B55",
+						confirmButtonText: "是的，我要删除！",
+						cancelButtonText: "让我再考虑一下…",
+						closeOnConfirm: false,
+						closeOnCancel: false,
+                     }).then(function(isConfirm) {
+                  if (isConfirm) {
+                  swal({
+      type: 'success',
+	  title: "删除成功",
+	  text: "您已永久删除本条信息",
+		 showConfirmButton: false,
+	  timer: 1500
+      });
+  }
+});	
+			});
+		
+	$(".demo7").click(function() {
+				 event.stopPropagation();
+		swal({
+  title: '请输入文件夹名称',
+  input: 'text',
+  showCancelButton: true,
+  inputValidator: function(value) {
+    return new Promise(function(resolve, reject) {
+      if (value) {
+        resolve();
+      } else {
+        reject('请输入文件夹名称，此为必填项！');
+      }
+    });
+  }
+}).then(function(result) {
+  if (result) {
+    swal({
+      type: 'success',
+	  title: "添加成功",
+		 showConfirmButton: false,
+	  timer: 1500
+      });
+  }
+})
+				
+			});
+	});
+//      sweetalert弹窗 END
+
+</script>
+  <script>
+   function func11() {
+        //iframe窗
+    layer.open({
+     type: 2,
+            title: '正在上传（1/6）',
+            shadeClose: true,
+            shade: false,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['680px', '420px'],
+            content: '云盘-传送文件.html'
+});
+ }
+      /*  function func11() {
+        //iframe窗
+        layer.open({
+            type: 2,
+            title: false,
+            closeBtn: 0, //不显示关闭按钮
+            shade: [0],
+            area: ['340px', '215px'],
+            offset: 'auto', //右下角弹出
+            time: 2000, //2秒后自动关闭
+            shift: 2,
+            content: ['云盘-下载列表.html', 'no'], //iframe的url，no代表不显示滚动条
+            end: function(){ //此处用于演示
+                layer.open({
+                    type: 2,
+                    title: '正在下载...1/8',
+                    shadeClose: true,
+                    shade: false,
+                    maxmin: true, //开启最大化最小化按钮
+                    area: ['1150px', '650px'],
+                    content: 'http://www.baidu.com'
+                });
+            }
+        });
+    }*/
+    </script>
+<SCRIPT type="text/javascript">
+		//	    ztree树结构
+		var curMenu = null,
+			zTree_Menu = null;
+		var setting = {
+			check: {
+				enable: true
+			},
+			view: {
+				showLine: false,
+				showIcon: false,
+				selectedMulti: false,
+				dblClickExpand: false,
+				addDiyDom: addDiyDom
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeClick: beforeClick
+			}
+		};
+
+		var zNodes = [{
+				id: 1,
+				pId: 0,
+				name: "我的云盘",
+				open: true
+			},
+			{
+				id: 11,
+				pId: 1,
+				name: "<默认>",
+				   url:"通讯录-常用联系人.html",
+				target:"_self",
+			},
+			{
+				id: 12,
+				pId: 1,
+				name: "自定义",
+				   url:"通讯录-常用联系人.html",
+				target:"_self",
+			},
+			{
+				id: 13,
+				pId: 1,
+				name: "自定义1",
+				   url:"通讯录-常用联系人.html",
+				target:"_self",
+			},
+			
+			{
+				id: 2,
+				pId: 0,
+				name: "常用联系部门",
+				open: true,
+
+			},
+					  
+			{
+				id: 21,
+				pId: 2,
+				name: "<默认>",
+				url:"通讯录-常用联系部门.html",
+				target:"_self"
+			},
+			{
+				id: 22,
+				pId: 2,
+				name: "自定义1",
+					url:"通讯录-常用联系部门.html",
+				target:"_self"
+			},
+			{
+				id: 23,
+				pId: 2,
+				name: "自定义2",
+				url:"通讯录-常用联系部门.html",
+				target:"_self"
+			},
+
+			{
+				id: 3,
+				pId: 0,
+				name: "西安市碑林区",
+			},
+			{
+				id: 31,
+				pId: 3,
+				name: "碑林区区政府",
+			   url:"通讯录-域展示.html",
+				target:"_self",
+			},
+			{
+				id: 32,
+				pId: 3,
+				name: "碑林区民政局",
+			   url:"通讯录-域展示.html",
+				target:"_self",
+			}
+		];
+
+	
+          var zNodes2 = [{
+				id: 1,
+				pId: 0,
+				name: "陕西省",
+				open: true
+			},
+			{
+				id: 11,
+				pId: 1,
+				name: "省政府办公厅"
+			},
+			{
+				id: 12,
+				pId: 1,
+				name: "省开发委"
+			},
+			{
+				id: 13,
+				pId: 1,
+				name: "省教育厅"
+			},
+			{
+				id: 111,
+				pId: 12,
+				name: "陕西省体育局"
+			},
+			{
+				id: 112,
+				pId: 13,
+				name: "陕西省民政局"
+			},
+			{
+				id: 113,
+				pId: 11,
+				name: "陕西省卫生局"
+			},
+			{
+				id: 114,
+				pId: 113,
+				name: "陕西省教育局"
+			},
+			{
+				id: 3,
+				pId: 0,
+				name: "西安市碑林区"
+			},
+			{
+				id: 31,
+				pId: 3,
+				name: "碑林区区政府"
+			},
+			{
+				id: 32,
+				pId: 3,
+				name: "碑林区民政局"
+			}
+		];
+
+        
+	
+		function addDiyDom(treeId, treeNode) {
+			var spaceWidth = 5;
+			var switchObj = $("#" + treeNode.tId + "_switch"),
+				icoObj = $("#" + treeNode.tId + "_ico");
+			switchObj.remove();
+			icoObj.before(switchObj);
+
+			if(treeNode.level > 1) {
+				var spaceStr = "<span style='display: inline-block;width:" + (spaceWidth * treeNode.level) + "px'></span>";
+				switchObj.before(spaceStr);
+			}
+		}
+
+	
+		
+
+	
+
+		function beforeClick(treeId, treeNode) {
+			if(treeNode.level == 0) {
+				var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+				zTree.expandNode(treeNode);
+				return false;
+			}
+			return true;
+		}
+	
+	
+		
+		$(document).ready(function() {
+			var treeObj = $("#treeDemo");
+			$.fn.zTree.init(treeObj, setting, zNodes);
+			zTree_Menu = $.fn.zTree.getZTreeObj("treeDemo");
+			curMenu = zTree_Menu.getNodes()[0].children[0].children[0];
+			zTree_Menu.selectNode(curMenu);
+
+			treeObj.hover(function() {
+				if(!treeObj.hasClass("showIcon")) {
+					treeObj.addClass("showIcon");
+				}
+			}, function() {
+				treeObj.removeClass("showIcon");
+			});
+		});
+		//		ztree树结构 END
+
+		//     悬停显示
+		$(document).ready(function() {
+			$("#role_more li").hover(
+				function() {
+					$(this).addClass("hover").find("div.role_hidebox").show();
+				},
+
+				function() {
+					$(this).removeClass("hover").find("div.role_hidebox").hide();
+				}
+			);
+		});
+		//		悬停显示 END
+	</SCRIPT>
+</html>

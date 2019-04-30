@@ -1,0 +1,130 @@
+
+
+
+/*主色调按钮*/
+
+
+.btn-mainColor:focus, .btn-mainColor:hover, .open .dropdown-toggle.btn-mainColor{
+	
+	background-color:#3ba4f5;
+	border-color: #3ba4f5;
+	color: #fff;
+}
+
+.btn-mainColor.active, .btn-mainColor:active{
+	background-color:#3376aa;
+	border-color: #3376aa;
+	color: #fff;
+	
+}
+.btn-mainColor{
+	
+	background-color:#3ba4f5;
+	border-color: #3ba4f5;
+	color: #fff;
+}
+.btn-addColor:focus, .btn-addColor:hover, .open .dropdown-toggle.btn-addColor{
+	
+	background-color:#a0d468;
+	border-color: #a0d468;
+	color: #fff;
+}
+
+.btn-addColor.active, .btn-addColor:active{
+	background-color:#6d9a3c;
+	border-color: #6d9a3c;
+	color: #fff;
+	
+}
+
+.btn-addColor{
+	background-color:#a0d468;
+	border-color: #a0d468;
+	color: #fff;
+}
+
+.btn-mainBorder{
+	background-color: #fff;
+	border-color: #3BA4F5;
+	color: #3ba4f5;
+}
+
+.btn-mainBorder.active, .btn-mainBorder:active{
+	background-color: #fff;
+	border-color: #3BA4F5;
+	color: #3ba4f5;
+	
+}
+.btn-mainBorder:focus, .btn-mainBorder:hover, .open .dropdown-toggle.btn-mainBorder{
+	
+	background-color: #fff;
+	border-color: #3BA4F5;
+	color: #3ba4f5;
+}
+/*table中的button margin为0*/
+
+.btn-M0{
+	margin: 0!important;
+}
+
+
+/*margin-bottom*/
+.margin-B{
+	margin-bottom: 15px;
+}
+
+/*选择日期插件——开始结束日期插件*/
+.B-datepicker{
+	width: 49%!important;
+	margin-right: 2%;
+}
+.E-datepicker{
+	width: 49%!important;
+}
+
+/*bootstrap 内置checkbox*/
+.checkbox-mainColor input[type="checkbox"]:checked + label::before, .checkbox-mainColor input[type="radio"]:checked + label::before{
+	background-color:#3BA4F5;
+	border-color: #3ba4f5;
+}
+.checkbox-mainColor input[type="checkbox"]:checked + label::after, .checkbox-mainColor input[type="radio"]:checked + label::after{
+	color:#fff;
+}
+/*bootstrap 内置radio*/
+.radio-mainColor input[type="radio"]:checked + label::before{
+	border-color: #3ba4f5!important;
+}
+.radio-mainColor input[type="radio"]:checked + label::after{
+	background-color: #3BA4F5!important;
+}
+.radio-mainColor input[type="radio"] + label::after{
+	background-color: #3BA4F5!important;
+}
+
+.fjsc{
+	width: 250px;
+	height:64px;
+	background:#f5f5f5;
+	float:left;
+	margin-right:1%;
+	margin:8px 1% 0 0;
+	overflow:hidden;
+}
+
+.txt{
+	width:100%;
+	background:rgba(18,21,44,0.7);
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	padding:0 12px;
+}
+.ell {
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+ .form-control[readonly]{
+ 	background-color: #fff!important;
+ }

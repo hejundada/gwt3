@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>通知维护</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+<link href="css/btn.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+<link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+<link href="css/style.shxy.css" rel="stylesheet">
+<link href="css/font.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="js/plugins/Calendar/stylesheets/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+  <div class="row">
+    <div class="nav-area"> <i class="fa fa-home nav-icon"></i> <a href="#" class="nav-link">首页</a> <span class="nav-break">>></span> <span class="nav-position">通知维护</span> </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="ibox float-e-margins animated fadeInRight">
+        <div class="ibox-title"> <span class="title-icon"></span> <span class="title-font"> 通知维护 </span> </div>
+        <div class="ibox-content" >
+          <div class="m-b-sm m-l-n">
+            <div  class="col-sm-6">
+              <div class="col-sm-4">
+                <select class="form-control m-b" name="account">
+                  <option>选择通知类型</option>
+                  <option>会议通知</option>
+                  <option>通知</option>
+                  <option>材料征集</option>
+                
+                </select>
+              </div>
+              <div class="col-sm-8" id="hello">
+                <input placeholder="开始日期" class="form-control layer-date col-sm-6 B-datepicker date-icon" id="start">
+                <input placeholder="结束日期" class="form-control layer-date col-sm-6 E-datepicker date-icon" id="end">
+              </div>
+            </div>
+            <div  class="col-sm-6">
+              <div style="display: flex;" class="m-r-n-xs">
+                <div style="display: block; width: 100%; margin-right: 8px;">
+                  <input class="form-control input-outline" type="text" placeholder="请输入标题">
+                </div>
+                <div style="width:70px; float: right; margin-right: 8px;">
+                  <button class="btn btn-mainColor" type="button"><i class="fa fa-search"></i>&nbsp;搜索</button>
+                </div>
+                 <div style="width:120px; float: right;">
+                  <button class="btn btn-warning" type="button" onclick="location.href='已删除通知.html'"><i class="fa fa-times-circle-o"></i>&nbsp;已删除通知</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--列表-->
+          
+          <table class="table table-bordered table-hover dataTables-example dataTable table-onepiece" >
+            <thead>
+              <tr>
+                <th>通知类型</th>
+                <th>通知标题</th>
+                <th>发布人</th>
+                <th>发布时间</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已发通知-通知详情.html'">
+                <td>会议通知</td>
+                <td>全国重点美术院校学习贯彻习近平新时代文艺思想座谈会在西安召开</td>
+                <td>李龙春<p class="font-department">西安神航星云有限公司</p></td>
+                <td> 2017-12-13 23:14 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已发通知-通知详情.html'">
+                <td>会议通知</td>
+                <td>全省建设法治政府推进大会召开</td>
+               <td>李龙春<p class="font-department">西安神航星云有限公司</p></td>
+                <td> 2017-12-11 12:23 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已发通知-通知详情.html'">
+                <td>会议通知</td>
+                <td>公民代表走进省政府了解大气污染防治工作</td>
+                <td>李龙春<p class="font-department">西安神航星云有限公司</p></td>
+                <td> 2017-09-11 12:23 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已发通知-通知详情.html'">
+                <td>会议通知</td>
+                <td>全国重点美术院校学习贯彻习近平新时代文艺思想座谈会在西安召开</td>
+                <td>李龙春<p class="font-department">西安神航星云有限公司</p></td>
+                <td> 2017-12-13 23:14 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已发通知-通知详情.html'">
+                <td>会议通知</td>
+                <td>全省建设法治政府推进大会召开</td>
+                <td>李龙春<p class="font-department">西安神航星云有限公司</p></td>
+                <td> 2017-12-11 12:23 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已发通知-通知详情.html'">
+                <td>会议通知</td>
+                <td>公民代表走进省政府了解大气污染防治工作</td>
+                <td>李龙春<p class="font-department">西安神航星云有限公司</p></td>
+                <td> 2017-09-11 12:23 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已发通知-通知详情.html'">
+                <td>会议通知</td>
+                <td>全省建设法治政府推进大会召开</td>
+               <td>李龙春<p class="font-department">西安神航星云有限公司</p></td>
+                <td> 2017-12-11 12:23 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已发通知-通知详情.html'">
+                <td>会议通知</td>
+                <td>公民代表走进省政府了解大气污染防治工作</td>
+               <td>李龙春<p class="font-department">西安神航星云有限公司</p></td>
+                <td> 2017-09-11 12:23 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已发通知-通知详情.html'">
+                <td>会议通知</td>
+                <td>全国重点美术院校学习贯彻习近平新时代文艺思想座谈会在西安召开</td>
+               <td>李龙春<p class="font-department">西安神航星云有限公司</p></td>
+                <td> 2017-12-13 23:14 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已发通知-通知详情.html'">
+                <td>通知</td>
+                <td>全省建设法治政府推进大会召开</td>
+               <td>李龙春<p class="font-department">西安神航星云有限公司</p></td>
+                <td> 2017-12-11 12:23 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已发通知-通知详情.html'">
+                <td>材料征集</td>
+                <td>全国重点美术院校学习贯彻习近平新时代文艺思想座谈会在西安召开</td>
+               <td>李龙春<p class="font-department">西安神航星云有限公司</p></td>
+                <td> 2017-12-13 23:14 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <!--列表 END--> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript" src="js/plugins/Calendar/javascripts/simple-calendar.js"></script>
+<script>
+     var myCalendar = new SimpleCalendar('#calendar');
+    </script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>
+<script src="js/content.min.js?v=1.0.0"></script>
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="js/plugins/chosen/chosen.jquery.js"></script>
+<script>
+		
+//		radio样式
+		$(document).ready(function() {
+			$(".i-checks").iCheck({
+				checkboxClass: "icheckbox_square-mainColor",
+				radioClass: "iradio_square-mainColor",
+			})
+		});
+//		radio样式 END
+
+$(document).ready(function() {
+			$(".demo4").click(function() {
+				 event.stopPropagation();
+		swal({
+  title: '请输入删除原因',
+  input: 'text',
+  showCancelButton: true,
+  inputValidator: function(value) {
+    return new Promise(function(resolve, reject) {
+      if (value) {
+        resolve();
+      } else {
+        reject('请输入删除原因，此为必填项！');
+      }
+    });
+  }
+}).then(function(result) {
+  if (result) {
+    swal({
+      type: 'success',
+	  title: "删除成功",
+	  text: "您已成删除本条公告",
+		 showConfirmButton: false,
+	  timer: 1500
+    });
+  }
+})
+				
+			});
+		});
+
+//      sweetalert弹窗 END
+</script>
+<script src="js/plugins/layer/laydate/laydate.js"></script>
+<script>
+        laydate({elem:"#hello",event:"focus"});var start={elem:"#start",format:"YYYY/MM/DD hh:mm:ss",min:laydate.now(),max:"2099-06-16 23:59:59",istime:true,istoday:false,choose:function(datas){end.min=datas;end.start=datas}};var end={elem:"#end",format:"YYYY/MM/DD hh:mm:ss",min:laydate.now(),max:"2099-06-16 23:59:59",istime:true,istoday:false,choose:function(datas){start.max=datas}};laydate(start);laydate(end);
+    </script>
+</html>

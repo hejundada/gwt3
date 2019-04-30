@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+	
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>文件管理器</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+		<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+		<link href="css/btn.css" rel="stylesheet">
+		<link href="css/animate.min.css" rel="stylesheet">
+		<link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+		<link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+		<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+		<link href="css/style.shxy.css" rel="stylesheet">
+		<link href="css/font.css" rel="stylesheet">
+		<link rel="stylesheet" href="js/plugins/zTree/css/zTreeStyle.css" type="text/css">
+	</head>
+
+	<body class="gray-bg">
+		<div class="wrapper wrapper-content">
+			<div class="row">
+	
+				<div class="col-sm-3">
+					<div class="ibox float-e-margins">
+
+						<div class="ibox-content">
+							<div class="ztree-box">
+								<div style="display: flex; width: 100%;">
+
+									<div style="display: block; width:74%; margin-right: 8px;">
+										<input class="form-control input-outline" type="text" placeholder="请输入部门名称">
+
+									</div>
+									<div style="width:100px; float:right;">
+										<button class="btn btn-block btn-addColor  pull-right" data-toggle="modal" data-target="#myModal" type="button"><i class="glyphicon glyphicon-plus"></i>&nbsp;新增部门</button>
+									</div>
+								</div>
+								<div class="zTreeDemoBackground left">
+									<ul id="treeDemo" class="ztree" style="height: 550px;">
+									</ul>
+									<div class="treeRightMenu">
+										<ul>
+											<li id="m_add"><i class="glyphicon glyphicon-plus"></i>新增部门</li>
+											<li id="m_rename"><i class="glyphicon glyphicon glyphicon-pencil"></i>重命名</li>
+											<li id="m_del" class="no-border"><i class="glyphicon glyphicon-trash"></i>删除部门</li>
+										</ul>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+		</div>
+		</div>
+		
+		
+	</body>
+	<script src="js/jquery.min.js?v=2.1.4"></script>
+	<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+	<script src="js/bootstrap.min.js?v=3.3.6"></script>
+	<script type="text/javascript" src="js/plugins/zTree/js/jquery.ztree.core.js"></script>
+	<script src="js/plugins/iCheck/icheck.min.js"></script>
+	
+	<!--ztree树形结构-->
+	<SCRIPT type="text/javascript">
+		var curMenu = null,
+			zTree_Menu = null;
+		var setting = {
+			view: {
+				showLine: false,
+				showIcon: false,
+				selectedMulti: false,
+				dblClickExpand: false,
+				addDiyDom: addDiyDom
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeClick: beforeClick
+			}
+		};
+
+		var zNodes = [{
+				id: 1,
+				pId: 0,
+				name: "陕西省",
+				open: true
+			},
+			{
+				id: 11,
+				pId: 1,
+				name: "省政府办公厅"
+			},
+			{
+				id: 12,
+				pId: 1,
+				name: "省开发委"
+			},
+			{
+				id: 13,
+				pId: 1,
+				name: "省教育厅"
+			},
+			{
+				id: 111,
+				pId: 12,
+				name: "陕西省体育局"
+			},
+			{
+				id: 112,
+				pId: 13,
+				name: "陕西省民政局"
+			},
+			{
+				id: 113,
+				pId: 11,
+				name: "陕西省卫生局"
+			},
+			{
+				id: 114,
+				pId: 113,
+				name: "陕西省教育局"
+			},
+			{
+				id: 3,
+				pId: 0,
+				name: "西安市碑林区"
+			},
+			{
+				id: 31,
+				pId: 3,
+				name: "碑林区区政府"
+			},
+			{
+				id: 32,
+				pId: 3,
+				name: "碑林区民政局"
+			}
+		];
+
+		function addDiyDom(treeId, treeNode) {
+			var spaceWidth = 5;
+			var switchObj = $("#" + treeNode.tId + "_switch"),
+				icoObj = $("#" + treeNode.tId + "_ico");
+			switchObj.remove();
+			icoObj.before(switchObj);
+
+			if(treeNode.level > 1) {
+				var spaceStr = "<span style='display: inline-block;width:" + (spaceWidth * treeNode.level) + "px'></span>";
+				switchObj.before(spaceStr);
+			}
+		}
+
+		function beforeClick(treeId, treeNode) {
+			if(treeNode.level == 0) {
+				var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+				zTree.expandNode(treeNode);
+				return false;
+			}
+			return true;
+		}
+
+		$(document).ready(function() {
+			var treeObj = $("#treeDemo");
+			$.fn.zTree.init(treeObj, setting, zNodes);
+			zTree_Menu = $.fn.zTree.getZTreeObj("treeDemo");
+			curMenu = zTree_Menu.getNodes()[0].children[0].children[0];
+			zTree_Menu.selectNode(curMenu);
+
+			treeObj.hover(function() {
+				if(!treeObj.hasClass("showIcon")) {
+					treeObj.addClass("showIcon");
+				}
+			}, function() {
+				treeObj.removeClass("showIcon");
+			});
+		});
+		
+	</SCRIPT>
+    <!--ztree树形结构 END-->
+</html>

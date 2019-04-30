@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文件管理器</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+<link href="css/btn.css" rel="stylesheet">
+<link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+<link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+<link href="css/style.shxy.css" rel="stylesheet">
+<link href="css/font.css" rel="stylesheet">
+<link rel="stylesheet" href="js/plugins/zTree/css/zTreeStyle.css" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="js/plugins/Calendar/stylesheets/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+<!-- <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen"> -->
+<!-- <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+   <link rel="stylesheet" type="text/css" href="stylesheets/simple-calendar.css">-->
+<!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+  <div class="row"> 
+    <!--<div class="col-sm-3">
+					<div class="ibox float-e-margins">
+						<div class="ibox-content">
+							<div class="search">
+								<input class="form-control input-outline width-100 m-b-sm" type="text" placeholder="请输入部门名称">
+								<div class="button-area">
+									<button class="btn btn-primary" type="button"><i class="glyphicon glyphicon-plus"></i>&nbsp;新增</button>
+									<button class="btn btn-warning" type="button"><i class="fa fa-edit"></i>&nbsp;编辑</button>
+									<button class="btn btn-danger demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button>
+								</div>
+							</div>
+							<div>
+							<div class="tabs-container">
+                                <div class="tabs-left data-ul">
+                                    <ul class="nav nav-tabs dictionary-ul">
+                                        <li class="active">
+                                        	<a data-toggle="tab" href="#tab-1">区域</a>
+                                        </li>
+                                        <li class="">
+                                        	<a data-toggle="tab" href="#tab-2">部门管理</a>
+                                        </li>
+                                        <li class="">
+                                        	<a data-toggle="tab" href="#tab-3">用户级别</a>
+                                        </li>
+                                        <li class="">
+                                        	<a data-toggle="tab" href="#tab-4">用户权限</a>
+                                        </li>
+                                        <li class="">
+                                        	<a data-toggle="tab" href="#tab-5">用户管理</a>
+                                        </li>
+                                        <li class="">
+                                        	<a data-toggle="tab" href="#tab-6">部门管理</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+								
+							</div>
+						</div>
+					</div>
+				</div>-->
+    <div class="col-sm-12">
+      <div class="ibox float-e-margins animated fadeInRight">
+        <div class="ibox-title"> <span class="title-icon"></span> <span class="title-font"> 我的消息 </span> </div>
+        <div class="ibox-content" style="padding-top: 0px;">
+          <div  class="message-area" >
+            <div class="message-area1"> <span class="message-close"><a type="button"  > <i class="fa fa-times"></i> </a></span> <span class="new-message"><i class="fa fa-circle"></i></span> <span class="app-logo"> <img src="img/report-s.png"/> </span> </div>
+            <div class="message-area2"  onclick="window.open('举报信息-云盘.html','_self')">
+              <div class="message-info">
+                <p class="message-title"><span>云盘文件名为“陕西省政府2018发展规划机要文件”的文件被举报</span> </p>
+                <span class="info-area"> <b class="badge reportColor">举报</b> <b class="info-detail">张惟中</b> <b class="info-detail">陕西省公安厅扫黄打非小组</b> </span> <span class="message-datetime"> 2017-11-11&nbsp;11:11 </span> </div>
+            </div>
+          </div>
+          <div  class="message-area" >
+            <div class="message-area1"> <span class="message-close"><a type="button"  > <i class="fa fa-times"></i> </a></span> <span class="new-message"><i class="fa fa-circle"></i></span> <span class="app-logo"> <img src="img/report-s.png"/> </span> </div>
+            <div class="message-area2"  onclick="window.open('举报信息.html','_self')">
+              <div class="message-info">
+                <p class="message-title"><span>标题为“有着百年历史的京沪铁路是东北、华北通往华东的必经之路”的公告被举报</span> </p>
+                <span class="info-area"> <b class="badge reportColor">举报</b> <b class="info-detail">张惟中</b> <b class="info-detail">陕西省公安厅扫黄打非小组</b> </span> <span class="message-datetime"> 2017-11-11&nbsp;11:11 </span> </div>
+            </div>
+          </div>
+          <div  class="message-area" >
+            <div class="message-area1"> <span class="message-close"><a type="button"  > <i class="fa fa-times"></i> </a></span> <span class="new-message"><i class="fa fa-circle"></i></span> <span class="app-logo"> <img src="img/report-s.png"/> </span> </div>
+            <div class="message-area2"  onclick="window.open('举报信息.html','_self')">
+              <div class="message-info">
+                <p class="message-title"><span> 你发布的标题为 “有着百年历史的京沪...”的公告因为涉密信息已经被管理员删除,请悉知</span> </p>
+                <span class="info-area"> <b class="badge reportColor">举报</b> <b class="info-detail">张惟中</b> <b class="info-detail">陕西省公安厅扫黄打非小组</b> </span> <span class="message-datetime"> 2017-11-11&nbsp;11:11 </span> </div>
+            </div>
+          </div>
+          <div  class="message-area">
+            <div class="message-area1"> <span class="message-close"><a type="button"  > <i class="fa fa-times"></i> </a></span> <span class="new-message"><i class="fa fa-circle"></i></span> <span class="app-logo"> <img src="img/message.png"/> </span> </div>
+            <div class="message-area2">
+              <div class="message-info">
+                <p class="message-title"> <span>有着百年历史的京沪铁路是东北、华北通往华东的必经之路，一直是中国最繁忙的铁路干线之一。进入21世纪...</span> </p>
+                <span class="info-area"> <b class="badge primary-bg-Color">通知变更</b> <b class="badge badge-mainColor">入户调查</b> <b class="info-detail">张惟中</b> <b class="info-detail">陕西省公安厅扫黄打非小组</b> </span> <span class="message-datetime"> 2017-11-11&nbsp;11:11 <b class="Sign-state red">未签收</b> </span> </div>
+            </div>
+          </div>
+          <div  class="message-area" >
+            <div class="message-area1"> <span class="message-close"><a type="button"  > <i class="fa fa-times"></i> </a></span> <span class="new-message"><i class="fa fa-circle"></i></span> <span class="app-logo"> <img src="img/message.png"/> </span> </div>
+            <div class="message-area2">
+              <div class="message-info">
+                <p class="message-title"><span> 有着百年历史的京沪铁路是东北、华北通往华东的必经之路，一直是中国最繁忙的铁路干线之一。进入21世纪...</span> </p>
+                <span class="info-area"><b class="badge primary-bg-Color">转发</b> <b class="badge badge-mainColor">入户调查</b> <b class="info-detail">张惟中</b> <b class="info-detail">陕西省公安厅扫黄打非小组</b> </span> <span class="message-datetime"> 2017-11-11&nbsp;11:11 <b class="Sign-state red">未签收</b> </span> </div>
+            </div>
+          </div>
+          <div  class="message-area" >
+            <div class="message-area1"> <span class="message-close"><a type="button"> <i class="fa fa-times"></i> </a></span> <span class="new-message"><i class="fa fa-circle"></i></span> <span class="app-logo"> <img src="img/message.png"/> </span> </div>
+            <div class="message-area2"   data-toggle="modal" data-target="#myModal7" >
+              <div class="message-info">
+                <p class="message-title"><span>用户“黄浩 神航星云测试部”申请调入“神航星云 研发部”请及时处理</span> </p>
+                <span class="info-area"> <b class="badge primary-bg-Color">调岗</b> <b class="info-detail">张惟中</b> <b class="info-detail">陕西省公安厅扫黄打非小组</b> </span> <span class="message-datetime"> 2017-11-11&nbsp;11:11 <b class="Sign-state red">未处理</b> </span> </div>
+            </div>
+          </div>
+          <div  class="message-area" >
+            <div class="message-area1"> <span class="message-close"><a type="button"  > <i class="fa fa-times"></i> </a></span> <span class="new-message"><i class="fa fa-circle"></i></span> <span class="app-logo"> <img src="img/message.png"/> </span> </div>
+            <div class="message-area2"  >
+              <div class="message-info">
+                <p class="message-title"><span>有着百年历史的京沪铁路是东北、华北通往华东的必经之路，一直是中国最繁忙的铁路干线之一。进入21世纪...陕西省政府2018发展规划机要文件”的文件被举报陕西省政府2018发展规划机要文件”的文件被举报</span> </p>
+                <span class="info-area"> <b class="badge badge-mainColor">入户调查</b> <b class="info-detail">张惟中</b> <b class="info-detail">陕西省公安厅扫黄打非小组</b> </span> <span class="message-datetime"> 2017-11-11&nbsp;11:11 <b class="Sign-state blue2">已签收</b> </span> </span> </div>
+            </div>
+          </div>
+          <div  class="message-area" >
+            <div class="message-area1"> <span class="message-close"><a type="button"  > <i class="fa fa-times"></i> </a></span> <span class="new-message"><i class="fa fa-circle"></i></span> <span class="app-logo"> <img src="img/message.png"/> </span> </div>
+            <div class="message-area2"  >
+              <div class="message-info">
+                <p class="message-title"><span>有着百年历史的京沪铁路是东北、华北通往华东的必经之路，一直是中国最繁忙的铁路干线之一。进入21世纪...陕西省政府2018发展规划机要文件”的文件被举报陕西省政府2018发展规划机要文件”的文件被举报</span> </p>
+                <span class="info-area"> <b class="badge badge-mainColor">入户调查</b> <b class="info-detail">张惟中</b> <b class="info-detail">陕西省公安厅扫黄打非小组</b> </span> <span class="message-datetime"> 2017-11-11&nbsp;11:11 <b class="Sign-state blue2">已签收</b> </span> </span> </div>
+            </div>
+          </div>
+          <div  class="message-area" >
+            <div class="message-area1"> <span class="message-close"><a type="button"  > <i class="fa fa-times"></i> </a></span> <span class="new-message"><i class="fa fa-circle"></i></span> <span class="app-logo"> <img src="img/message.png"/> </span> </div>
+            <div class="message-area2"  >
+              <div class="message-info">
+                <p class="message-title"><span>有着百年历史的京沪铁路是东北、华北通往华东的必经之路，一直是中国最繁忙的铁路干线之一。进入21世纪...陕西省政府2018发展规划机要文件”的文件被举报陕西省政府2018发展规划机要文件”的文件被举报</span> </p>
+                <span class="info-area"> <b class="badge badge-mainColor">入户调查</b> <b class="info-detail">张惟中</b> <b class="info-detail">陕西省公安厅扫黄打非小组</b> </span> <span class="message-datetime"> 2017-11-11&nbsp;11:11 <b class="Sign-state blue2">已签收</b> </span> </span> </div>
+            </div>
+          </div>
+          <div class="message-paging">
+            <ul id="sysAppItemPage" class="pagination">
+              <li class="page-item page-info disabled pull-left" >显示第1至6项结果，共6项</li>
+              <li class="page-item first disabled pull-right"><a href="#" class="page-link">尾页</a></li>
+              <li class="page-item next disabled pull-right"><a href="#" class="page-link">下一页</a></li>
+              <li class="page-item active pull-right"> <a href="#" class="page-link">5</a> </li>
+              <li class="page-item pull-right"> <a href="#" class="page-link">4</a> </li>
+              <li class="page-item pull-right"> <a href="#" class="page-link">3</a> </li>
+              <li class="page-item pull-right"> <a href="#" class="page-link">2</a> </li>
+              <li class="page-item pull-right"> <a href="#" class="page-link pull-right">1</a> </li>
+              <li class="page-item prev disabled pull-right"><a href="#" class="page-link">上一页</a></li>
+              <li class="page-item last disabled pull-right"><a href="#" class="page-link">首页</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--7 接收弹窗-->
+<div class="modal inmodal" id="myModal7" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog-600">
+    <div class="modal-content animated fadeIn">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span> </button>
+        <!--<i class="fa fa-laptop modal-icon"></i>-->
+        <h4 class="modal-title">用户接收</h4>
+      </div>
+      <div class="modal-body" style="background: #fff;">
+        <div class="modal-content-m" >
+          <div class="User-info"> <span class="userimg"><img src="img/profile_small.jpg"></span>
+            <ul >
+              <li class="name">张三笑</li>
+              <li class="tel">13533568488</li>
+              <li>厅长&nbsp;&nbsp;&nbsp;陕西省卫生厅</li>
+              <dl>
+                <dt>级别:</dt>
+                <dd>厅级</dd>
+              </dl>
+              <dl>
+                <dt>固话:</dt>
+                <dd>029-88665988</dd>
+              </dl>
+            </ul>
+          </div>
+          <div> </div>
+          <form method="get" class="form-horizontal m-t-xl width-90 m-xl-a">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">接收类型:</label>
+              <div class="col-sm-10 m-t-xs">内部</div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">接收部门:</label>
+              <div class="col-sm-10 m-t-xs">神航星云研发部</div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-white demo2" data-dismiss="modal">拒绝</button>
+        <button type="button" class="btn btn-mainColor demo1" data-dismiss="modal">同意</button>
+        <!--<button type="button" class="btn btn-primary">显示Toast</button>--> 
+      </div>
+    </div>
+  </div>
+</div>
+<!--接收编辑 END--> 
+<!--选择接收部门弹窗-->
+<div class="modal inmodal" id="myModal8" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog-600">
+    <div class="modal-content animated fadeIn">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span> </button>
+        <!--<i class="fa fa-laptop modal-icon"></i>-->
+        <h4 class="modal-title">用户信息</h4>
+      </div>
+      <div class="modal-body" style="background: #fff;">
+        <div class="modal-content-m" >
+          <div class="ztree-box">
+            <div class="search">
+              <input class="form-control input-outline m-b-sm width-100" type="text" placeholder="请输入部门名称">
+              <a href=""><i></i></a> </div>
+            <div class="zTreeDemoBackground left">
+              <ul id="treeDemo2" class="ztree" style="height: 500px;">
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-white" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-mainColor" data-dismiss="modal">确定</button>
+        <!--<button type="button" class="btn btn-primary">显示Toast</button>--> 
+      </div>
+    </div>
+  </div>
+</div>
+<!--选择接收部门 END-->
+</body>
+<script type="text/javascript" src="js/plugins/Calendar/javascripts/simple-calendar.js"></script>
+<script>
+     var myCalendar = new SimpleCalendar('#calendar');
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>
+<script src="js/content.min.js?v=1.0.0"></script>
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="js/plugins/sweetalert/promise.js"></script><!--sweetalert2.0 IE 兼容-->
+<script src="js/plugins/chosen/chosen.jquery.js"></script>
+<script type="text/javascript" src="js/plugins/zTree/js/jquery.ztree.core.js"></script>
+<SCRIPT type="text/javascript">
+		//	    ztree树结构
+		var curMenu = null,
+			zTree_Menu = null;
+		var setting = {
+			check: {
+				enable: true
+			},
+			view: {
+				showLine: false,
+				showIcon: false,
+				selectedMulti: false,
+				dblClickExpand: false,
+				addDiyDom: addDiyDom
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeClick: beforeClick
+			}
+		};
+
+		var zNodes = [{
+				id: 1,
+				pId: 0,
+				name: "陕西省",
+				open: true
+			},
+			{
+				id: 11,
+				pId: 1,
+				name: "省政府办公厅"
+			},
+			{
+				id: 12,
+				pId: 1,
+				name: "省开发委"
+			},
+			{
+				id: 13,
+				pId: 1,
+				name: "省教育厅"
+			},
+			{
+				id: 111,
+				pId: 12,
+				name: "陕西省体育局"
+			},
+			{
+				id: 112,
+				pId: 13,
+				name: "陕西省民政局"
+			},
+			{
+				id: 113,
+				pId: 11,
+				name: "陕西省卫生局"
+			},
+			{
+				id: 114,
+				pId: 113,
+				name: "陕西省教育局"
+			},
+			{
+				id: 3,
+				pId: 0,
+				name: "西安市碑林区"
+			},
+			{
+				id: 31,
+				pId: 3,
+				name: "碑林区区政府"
+			},
+			{
+				id: 32,
+				pId: 3,
+				name: "碑林区民政局"
+			}
+		];
+
+		function addDiyDom(treeId, treeNode) {
+			var spaceWidth = 5;
+			var switchObj = $("#" + treeNode.tId + "_switch"),
+				icoObj = $("#" + treeNode.tId + "_ico");
+			switchObj.remove();
+			icoObj.before(switchObj);
+
+			if(treeNode.level > 1) {
+				var spaceStr = "<span style='display: inline-block;width:" + (spaceWidth * treeNode.level) + "px'></span>";
+				switchObj.before(spaceStr);
+			}
+		}
+
+		
+function beforeClick(treeId, treeNode) {
+			if(treeNode.level == 0) {
+				var zTree = $.fn.zTree.getZTreeObj("treeDemo2");
+				zTree.expandNode(treeNode);
+				return false;
+			}
+			return true;
+		}
+		
+		
+$(document).ready(function() {
+			var treeObj = $("#treeDemo2");
+			$.fn.zTree.init(treeObj, setting, zNodes);
+			zTree_Menu = $.fn.zTree.getZTreeObj("treeDemo2");
+			curMenu = zTree_Menu.getNodes()[0].children[0].children[0];
+			zTree_Menu.selectNode(curMenu);
+
+			treeObj.hover(function() {
+				if(!treeObj.hasClass("showIcon")) {
+					treeObj.addClass("showIcon");
+				}
+			}, function() {
+				treeObj.removeClass("showIcon");
+			});
+		});
+		
+		//		ztree树结构 END
+
+		//     悬停显示
+		$(document).ready(function() {
+			$("#role_more li").hover(
+				function() {
+					$(this).addClass("hover").find("div.role_hidebox").show();
+				},
+
+				function() {
+					$(this).removeClass("hover").find("div.role_hidebox").hide();
+				}
+			);
+		});
+		//		悬停显示 END
+	</SCRIPT>
+<script>
+		
+
+$(document).ready(function() {
+
+	$(".demo1").click(function() {
+				 event.stopPropagation();
+				swal({
+					title: "调岗成功！",
+					text:"黄浩已经被成功调入神航星云研发部",
+					type: "success",
+					showConfirmButton: false,
+	                timer: 1500
+					//	confirmButtonText: "完成"
+				});
+				time();
+			});	
+});
+		
+		//		sweetalert弹窗 END
+
+
+
+$(document).ready(function() {
+
+	$(".demo2").click(function() {
+				 event.stopPropagation();
+				swal({
+					title: "调岗拒绝！",
+					text:"黄浩已经被拒绝调入神航星云研发部",
+					type: "error",
+					showConfirmButton: false,
+	                timer: 1500
+					//	confirmButtonText: "完成"
+				});
+				time();
+			});	
+});
+		
+		//		sweetalert弹窗 END
+
+</script>
+</html>

@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>发布通知</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+<link href="css/btn.css" rel="stylesheet">
+<link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+<link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+<link href="css/style.shxy.css" rel="stylesheet">
+<link href="css/font.css" rel="stylesheet">
+<link rel="stylesheet" href="js/plugins/zTree/css/zTreeStyle.css" type="text/css">
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+  <div class="row">
+    <div class="nav-area"> <i class="fa fa-home nav-icon"></i> <a href="#" class="nav-link">首页</a> <span class="nav-break">>></span> <span class="nav-position">发布通知</span> </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title"> <span class="title-icon"></span> <span class="title-font"> 发布通知 </span> </div>
+        <div class="ibox-content">
+          <form method="get" class="form-horizontal m-t-xl width-90 m-xl-a">
+            <div class="form-group m-b-lg" >
+              <label class="col-sm-1 control-label"><span class="red">*&nbsp;</span>通知类型</label>
+              <div class="col-sm-11">
+                 <select class="form-control m-b" name="account">
+                                        <option>会议通知</option>
+                  <option>通知</option>
+                  <option>材料征集</option>
+                                        </select>
+
+              </div>
+            </div>
+            <div class="form-group m-b-lg" >
+              <label class="col-sm-1 control-label"><span class="red">*&nbsp;</span>标题</label>
+              <div class="col-sm-11">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group m-b-lg">
+              <label class="col-sm-1 control-label"><span class="red">*&nbsp;</span>时间</label>
+              <div class="col-sm-11">
+                  <div id="hello">
+                    <input placeholder="开始日期" class=" date-icon form-control layer-date col-sm-6 B-datepicker" id="start">
+                    <input placeholder="结束日期" class="form-control layer-date col-sm-6 E-datepicker date-icon" id="end">
+                  </div>
+              </div>
+            </div>
+            
+            <div class="form-group m-b-lg">
+              <label class="col-sm-1 control-label"><span class="red">*&nbsp;</span>接收部门</label>
+              <div class="col-sm-11 no-padding">
+                <div class="col-sm-11 Additions"  style="display: flex; position: relative; width: 100%;  border-right: solid 130px #fff">
+                  <input class="form-control input-outline" type="text"  placeholder="请选择接收部门">
+                  <button class="btn btn-block btn-addColor Additions-b" style=" position: absolute; right: -120px; width: 120px;" data-toggle="modal" data-target="#myModal" type="button"><i class="glyphicon glyphicon-plus"></i>&nbsp;选择部门</button>
+                </div>
+              </div>
+            </div>
+                        <div class="form-group m-b-lg">
+              <label class="col-sm-1 control-label"><span class="red">*&nbsp;</span>接收人</label>
+              <div class="col-sm-11 no-padding">
+                <div class="col-sm-11 Additions"  style="display: flex; position: relative; width: 100%;  border-right: solid 130px #fff">
+                  <input class="form-control input-outline" type="text"  placeholder="请选择接收部门">
+                  <button class="btn btn-block btn-addColor Additions-b" style=" position: absolute; right: -120px; width: 120px;" data-toggle="modal" data-target="#myModal3" type="button"><i class="glyphicon glyphicon-plus"></i>&nbsp;选择接收人</button>
+                </div>
+              </div>
+            </div>
+            <div class="form-group m-b-lg" >
+              <label class="col-sm-1 control-label"><span class="red">*&nbsp;</span>通知简介</label>
+              <div class="col-sm-11">
+                <textarea type="text" class="form-control"></textarea>
+              </div>
+            </div>
+            <div class="form-group m-b-lg">
+              <label class="col-sm-1 control-label">附件</label>
+              <div class="col-sm-11 no-padding">
+                <p style="display: flex;"> <span  class="full-left m-l-xs">
+                  <button class="btn btn-block btn-addColor" id="addenclosure" style="width: 120px;" type="button"><i class="glyphicon glyphicon-plus"></i>&nbsp;添加附件</button>
+                  </span> <span class="f-z-14 m-sm m-l-md full-left" ><i class="fa fa-paperclip"></i> 5 个附件，共1024kb </span></p>
+                <div class="col-lg-12"  id="enclosure" style="display: none">
+                  <div class="enclosure-box"> 
+                    
+                    <!--附件box开始-->
+                    <div class="file-box">
+                      <div class="file"> <span class="corner"></span>
+                        <div class="image"> <img alt="image" class="img-responsive" src="img/a9.jpg"> </div>
+                        <div class="file-name"> Italy street.jpg
+                          <p class="file-operation"> <span class="size">1024&nbsp;kb</span> <a target="_blank"  href="img/a9.jpg"> <i  class=" glyphicon glyphicon-eye-open"></i></a> <a href="#"> <i  class=" glyphicon glyphicon-trash "></i></a> <a href="#"> <i  class=" glyphicon glyphicon-save"></i></a> </p>
+                        </div>
+                      </div>
+                      <!--进度条-->
+                      <div style="width: 200px;">
+                        <div  class="progress">
+                          <div style="width: 35%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="35" role="progressbar" class="progress-bar progress-bar-success"> </div>
+                        </div>
+                        <div class="text-center">1024 kb</div>
+                      </div>
+                      <!--进度条--> 
+                    </div>
+                    <!--附件box结束--> 
+                    <!--附件box开始-->
+                    <div class="file-box">
+                      <div class="file"> <span class="corner"></span>
+                        <div class="image"> <img alt="image" class="img-responsive" src="img/a9.jpg"> </div>
+                        <div class="file-name"> Italy street.jpg
+                          <p class="file-operation"> <span class="size">1024&nbsp;kb</span>  <a target="_blank"  href="img/a9.jpg"><i  class=" glyphicon glyphicon-eye-open"></i></a> <a href="#"> <i  class=" glyphicon glyphicon-trash "></i></a> <a href="#"> <i  class=" glyphicon glyphicon-save"></i></a> </p>
+                        </div>
+                      </div>
+                      <!--进度条-->
+                      <div style="width: 200px;">
+                        <div  class="progress">
+                          <div style="width: 35%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="35" role="progressbar" class="progress-bar progress-bar-success"> </div>
+                        </div>
+                        <div class="text-center">1024 kb</div>
+                      </div>
+                      <!--进度条--> 
+                    </div>
+                    <!--附件box结束--> 
+                    <!--附件box开始-->
+                    <div class="file-box">
+                      <div class="file"> <span class="corner"></span>
+                        <div class="image"> <img alt="image" class="img-responsive" src="img/a9.jpg"> </div>
+                        <div class="file-name"> Italy street.jpg
+                          <p class="file-operation"> <span class="size">1024&nbsp;kb</span>  <a target="_blank"  href="img/a9.jpg"> <i  class=" glyphicon glyphicon-eye-open"></i></a> <a href="#"> <i  class=" glyphicon glyphicon-trash "></i></a> <a href="#"> <i  class=" glyphicon glyphicon-save"></i></a> </p>
+                        </div>
+                      </div>
+                      <!--进度条-->
+                      <div style="width: 200px;">
+                        <div  class="progress">
+                          <div style="width: 35%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="35" role="progressbar" class="progress-bar progress-bar-success"> </div>
+                        </div>
+                        <div class="text-center">1024 kb</div>
+                      </div>
+                      <!--进度条--> 
+                    </div>
+                    <!--附件box结束--> 
+                    <!--附件box开始-->
+                    <div class="file-box">
+                      <div class="file"> <span class="corner"></span>
+                        <div class="img-type"> <img alt="image" src="img/type/type-pdf.png"> </div>
+                        <div class="file-name"> Italy street.jpg
+                          <p class="file-operation"> <span class="size">1024&nbsp;kb</span> <a  href="#"> <i  class=" glyphicon glyphicon-eye-open"></i></a> <a href="#"> <i  class=" glyphicon glyphicon-trash "></i></a> <a href="#"> <i  class=" glyphicon glyphicon-save"></i></a> </p>
+                        </div>
+                      </div>
+                      <!--进度条-->
+                      <div style="width: 200px;">
+                        <div  class="progress">
+                          <div style="width: 35%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="35" role="progressbar" class="progress-bar progress-bar-success"> </div>
+                        </div>
+                        <div class="text-center">1024 kb</div>
+                      </div>
+                      <!--进度条--> 
+                    </div>
+                    <!--附件box结束--> 
+                    <!--附件box开始-->
+                    <div class="file-box">
+                      <div class="file"> <span class="corner"></span>
+                        <div class="img-type"> <img alt="image" src="img/type/type-doc.png"> </div>
+                        <div class="file-name"> Italy street.jpg
+                          <p class="file-operation"> <span class="size">1024&nbsp;kb</span> <a  href="#"> <i  class=" glyphicon glyphicon-eye-open"></i></a> <a href="#"> <i  class=" glyphicon glyphicon-trash "></i></a> <a href="#"> <i  class=" glyphicon glyphicon-save"></i></a> </p>
+                        </div>
+                      </div>
+                      <!--进度条-->
+                      <div style="width: 200px;">
+                        <div  class="progress">
+                          <div style="width: 35%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="35" role="progressbar" class="progress-bar progress-bar-success"> </div>
+                        </div>
+                        <div class="text-center">1024 kb</div>
+                      </div>
+                      <!--进度条--> 
+                    </div>
+                    <!--附件box结束-->
+                    
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row"> </div>
+            <div class="form-group">
+              <div class="col-sm-12 text-right">
+                <button type="button" class="btn btn-white" onclick="location.href='通知.html'">保存草稿</button>
+                <button type="button" class="btn btn-mainColor demo1">发送</button>
+              </div>
+            </div>
+            <!--附件-->
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--添加接收部门弹窗-->
+<div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content animated fadeIn">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span> </button>
+        <!--<i class="fa fa-laptop modal-icon"></i>-->
+        <h4 class="modal-title">选择接收部门</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-7">
+            <div class="panel panel-grey">
+              <div class="panel-heading-search">
+                <div class="input-group width-100">
+                  <input type="text" class="form-control b-r-0">
+                  <span class="icon-search-2" style=""></span> </div>
+              </div>
+              <div class="panel-body panel-body-1">
+                <div class="ztree-box col-sm-12 p-0">
+                  <div class="zTreeDemoBackground left">
+                    <ul id="treeDemo1" class="ztree" style="height: 375px;">
+                    </ul>
+                    <div class="treeRightMenu"> </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="panel panel-grey">
+              <div class="panel-heading"><span class="bolder">已选 </span> <a class="btn btn-white btn-bitbucket pull-right p-s-3-6 color333 m-t--4 " data-toggle="modal" data-target="#myModal"><span class="blue2 f-w-600">清 空</span></a> </div>
+              <div class="panel-body panel-body-2">
+                <div>
+                  <ul class="Selected-personnel">
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                     
+                      <div class="user-department width-90 width-90" title="省办公厅">省办公厅</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      
+                      <div class="user-department width-90" title="省办公厅">省办公厅</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+            
+                      <div class="user-department width-90" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+      
+                      <div class="user-department width-90" title="教育局">教育局</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                     
+                      <div class="user-department width-90" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+         
+                      <div class="user-department width-90" title="教育局">教育局</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                  
+                      <div class="user-department width-90" title="省办公厅">省办公厅</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                    
+                      <div class="user-department width-90" title="省办公厅">省办公厅</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                   
+                      <div class="user-department width-90" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                 
+                      <div class="user-department width-90" title="教育局">教育局</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                 
+                      <div class="user-department width-90" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+           
+                      <div class="user-department width-90" title="教育局">教育局</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+           
+                      <div class="user-department width-90" title="省办公厅">省办公厅</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                 
+                      <div class="user-department width-90" title="省办公厅">省办公厅</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                   
+                      <div class="user-department width-90" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+           
+                      <div class="user-department width-90" title="教育局">教育局</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                
+                      <div class="user-department width-90" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                    <li class="li-item"> <i class="fa icon-department2 pull-left blue2 f-z-16"></i>
+                      
+                      <div class="user-department width-90" title="教育局">教育局</div>
+                      <a class="pull-right" href="#"><i class="fa fa-close"></i> </a> </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-white" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-mainColor demo1" data-dismiss="modal" id="showtoast2">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--添加部门显示弹窗 END-->
+
+<!--搜索部门显示弹窗-->
+						<div class="modal inmodal" id="myModal3" tabindex="-1" role="dialog" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content animated fadeIn">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span> </button>
+										<!--<i class="fa fa-laptop modal-icon"></i>-->
+										<h4 class="modal-title">添加管理员</h4>
+
+									</div>
+									<div class="modal-body">
+										<div class="row">
+											<div class="col-sm-7">
+												<div class="panel panel-grey">
+													<div class="panel-heading-search">
+														<div class="input-group width-100">
+															<div class="input-group-btn width-20">
+																<select class="form-control b-r-0" name="account" style="padding: 6px 8px;">
+																	<option>部门</option>
+																	<option>姓名</option>
+																</select>
+															</div>
+															<input type="text" class="form-control b-r-0">
+															<span class="icon-search-2" style=""></span>
+														</div>
+													</div>
+													<div class="panel-body panel-body-1">
+
+														<div class="ztree-box col-sm-7 p-0">
+
+															<div class="zTreeDemoBackground left">
+																<ul id="treeDemo1" class="ztree" style="height: 375px;">
+																</ul>
+																<div class="treeRightMenu">
+
+																</div>
+															</div>
+															<div class="clearfix"></div>
+														</div>
+														<div class="col-sm-5 no-padding">
+															<div class="choose-content">
+
+																<div class="choose-item">
+																	<div class="check">
+																		<input type="checkbox" class="i-checks">
+																	</div>
+																	<div class="choose-object">
+																		<span class="choose-all">全 选</span>
+																	</div>
+																	<div class="hr-line-solid m-b-none m-t-xs"></div>
+																	<!--<button class="btn btn-mainColor btn-bitbucket" type="button">全 选</button>-->
+																</div>
+																<div class="choose-item">
+																	<div class="check">
+																		<input type="checkbox" class="i-checks">
+																	</div>
+																	<div class="choose-object">
+																		<span class="two-letters">李 四</span>
+																	</div>
+																</div>
+																<div class="choose-item">
+																	<div class="check">
+																		<input type="checkbox" class="i-checks">
+																	</div>
+																	<div class="choose-object">
+																		<span class="more-letters">孙悟空</span>
+																	</div>
+																</div>
+																<div class="choose-item">
+																	<div class="check">
+																		<input type="checkbox" class="i-checks">
+																	</div>
+																	<div class="choose-object">
+																		<span class="more-letters">唐三藏就</span>
+																	</div>
+																</div>
+																<div class="choose-item">
+																	<div class="check">
+																		<input type="checkbox" class="i-checks">
+																	</div>
+																	<div class="choose-object">
+																		<span class="more-letters">沙和尚</span>
+																	</div>
+																</div>
+																<div class="choose-item">
+																	<div class="check">
+																		<input type="checkbox" class="i-checks">
+																	</div>
+																	<div class="choose-object">
+																		<span class="more-letters">猪八戒</span>
+																	</div>
+																</div>
+																<div class="choose-item">
+																	<div class="check">
+																		<input type="checkbox" class="i-checks">
+																	</div>
+																	<div class="choose-object">
+																		<span class="more-letters">流沙河</span>
+																	</div>
+																</div>
+																<div class="choose-item">
+																	<div class="check">
+																		<input type="checkbox" class="i-checks">
+																	</div>
+																	<div class="choose-object">
+																		<span class="more-letters">流沙河</span>
+																	</div>
+																</div>
+																<div class="choose-item">
+																	<div class="check">
+																		<input type="checkbox" class="i-checks">
+																	</div>
+																	<div class="choose-object">
+																		<span class="more-letters">流沙河</span>
+																	</div>
+																</div>
+																<div class="choose-item">
+																	<div class="check">
+																		<input type="checkbox" class="i-checks">
+																	</div>
+																	<div class="choose-object">
+																		<span class="more-letters">流沙河</span>
+																	</div>
+																</div>
+																<div class="choose-item">
+																	<div class="check">
+																		<input type="checkbox" class="i-checks">
+																	</div>
+																	<div class="choose-object">
+																		<span class="more-letters">流沙河</span>
+																	</div>
+																</div>
+																<div class="choose-item">
+																	<div class="check">
+																		<input type="checkbox" class="i-checks">
+																	</div>
+																	<div class="choose-object">
+																		<span class="more-letters">流沙河</span>
+																	</div>
+																</div>
+																<div class="choose-item">
+																	<div class="check">
+																		<input type="checkbox" class="i-checks">
+																	</div>
+																	<div class="choose-object">
+																		<span class="more-letters">流沙河</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-5">
+												<div class="panel panel-grey">
+													<div class="panel-heading"><span class="bolder">已选 20 人</span>
+														<a class="btn btn-white btn-bitbucket pull-right p-s-3-6 color333 m-t--4 " data-toggle="modal" data-target="#myModal"><span class="blue2 f-w-600">清 空</span></a>
+													</div>
+													<div class="panel-body panel-body-2">
+														<div>
+															<ul class="Selected-personnel">
+																<li class="li-item">
+																	<i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+																	<div class="two-letters-name" title="李四">李四</div>
+																	<div class="user-department" title="省办公厅">省办公厅</div>
+																	<a class="pull-right" href="#"><i class="fa fa-close"></i> </a>
+																</li>
+																<li class="li-item">
+																	<i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+																	<div class="more-letters-name" title="孙悟空">孙悟空</div>
+																	<div class="user-department" title="省办公厅">省办公厅</div>
+																	<a class="pull-right" href="#"><i class="fa fa-close"></i> </a>
+																</li>
+																<li class="li-item">
+																	<i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+																	<div class="more-letters-name" title="猪八戒好啊">猪八戒好啊</div>
+																	<div class="user-department" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+																	<a class="pull-right" href="#"><i class="fa fa-close"></i> </a>
+																</li>
+																<li class="li-item">
+																	<i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+																	<div class="two-letters-name" title="唐僧">唐僧</div>
+																	<div class="user-department" title="教育局">教育局</div>
+																	<a class="pull-right" href="#"><i class="fa fa-close"></i> </a>
+																</li>
+																<li class="li-item">
+																	<i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+																	<div class="more-letters-name" title="猪八戒好">猪八戒好</div>
+																	<div class="user-department" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+																	<a class="pull-right" href="#"><i class="fa fa-close"></i> </a>
+																</li>
+																<li class="li-item">
+																	<i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+																	<div class="two-letters-name" title="唐僧">唐僧</div>
+																	<div class="user-department" title="教育局">教育局</div>
+																	<a class="pull-right" href="#"><i class="fa fa-close"></i> </a>
+																</li>
+																<li class="li-item">
+																	<i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+																	<div class="two-letters-name" title="李四">李四</div>
+																	<div class="user-department" title="省办公厅">省办公厅</div>
+																	<a class="pull-right" href="#"><i class="fa fa-close"></i> </a>
+																</li>
+																<li class="li-item">
+																	<i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+																	<div class="more-letters-name" title="孙悟空">孙悟空</div>
+																	<div class="user-department" title="省办公厅">省办公厅</div>
+																	<a class="pull-right" href="#"><i class="fa fa-close"></i> </a>
+																</li>
+																<li class="li-item">
+																	<i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+																	<div class="more-letters-name" title="猪八戒好啊">猪八戒好啊</div>
+																	<div class="user-department" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+																	<a class="pull-right" href="#"><i class="fa fa-close"></i> </a>
+																</li>
+																<li class="li-item">
+																	<i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+																	<div class="two-letters-name" title="唐僧">唐僧</div>
+																	<div class="user-department" title="教育局">教育局</div>
+																	<a class="pull-right" href="#"><i class="fa fa-close"></i> </a>
+																</li>
+																<li class="li-item">
+																	<i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+																	<div class="more-letters-name" title="猪八戒好">猪八戒好</div>
+																	<div class="user-department" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+																	<a class="pull-right" href="#"><i class="fa fa-close"></i> </a>
+																</li>
+																<li class="li-item">
+																	<i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+																	<div class="two-letters-name" title="唐僧">唐僧</div>
+																	<div class="user-department" title="教育局">教育局</div>
+																	<a class="pull-right" href="#"><i class="fa fa-close"></i> </a>
+																</li>
+																<li class="li-item">
+																	<i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+																	<div class="two-letters-name" title="李四">李四</div>
+																	<div class="user-department" title="省办公厅">省办公厅</div>
+																	<a class="pull-right" href="#"><i class="fa fa-close"></i> </a>
+																</li>
+																<li class="li-item">
+																	<i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+																	<div class="more-letters-name" title="孙悟空">孙悟空</div>
+																	<div class="user-department" title="省办公厅">省办公厅</div>
+																	<a class="pull-right" href="#"><i class="fa fa-close"></i> </a>
+																</li>
+																<li class="li-item">
+																	<i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+																	<div class="more-letters-name" title="猪八戒好啊">猪八戒好啊</div>
+																	<div class="user-department" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+																	<a class="pull-right" href="#"><i class="fa fa-close"></i> </a>
+																</li>
+																<li class="li-item">
+																	<i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+																	<div class="two-letters-name" title="唐僧">唐僧</div>
+																	<div class="user-department" title="教育局">教育局</div>
+																	<a class="pull-right" href="#"><i class="fa fa-close"></i> </a>
+																</li>
+																<li class="li-item">
+																	<i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+																	<div class="more-letters-name" title="猪八戒好">猪八戒好</div>
+																	<div class="user-department" title="西安神航星云科技有限公司">西安神航星云科技有限公司</div>
+																	<a class="pull-right" href="#"><i class="fa fa-close"></i> </a>
+																</li>
+																<li class="li-item">
+																	<i class="fa icon-personnel2 pull-left blue2 f-z-16"></i>
+																	<div class="two-letters-name" title="唐僧">唐僧</div>
+																	<div class="user-department" title="教育局">教育局</div>
+																	<a class="pull-right" href="#"><i class="fa fa-close"></i> </a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-white" data-dismiss="modal">取消</button>
+										<button type="button" class="btn btn-mainColor demo1" data-dismiss="modal" id="showtoast2">确定</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--搜索部门显示弹窗 END-->
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>
+<script src="js/content.min.js?v=1.0.0"></script>
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="js/plugins/chosen/chosen.jquery.js"></script>
+<script type="text/javascript" src="js/plugins/zTree/js/jquery.ztree.core.js"></script>
+    <script>
+$(document).ready(function(){
+  $("#addenclosure").click(function(){
+    $("#enclosure").fadeIn();
+  });
+});
+</script>
+<SCRIPT type="text/javascript">
+		//	    ztree树结构
+		var curMenu = null,
+			zTree_Menu = null;
+		var setting = {
+			check: {
+				enable: true
+			},
+			view: {
+				showLine: false,
+				showIcon: false,
+				selectedMulti: false,
+				dblClickExpand: false,
+				addDiyDom: addDiyDom
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeClick: beforeClick
+			}
+		};
+
+		var zNodes = [{
+				id: 1,
+				pId: 0,
+				name: "陕西省",
+				open: true
+			},
+			{
+				id: 11,
+				pId: 1,
+				name: "省政府办公厅"
+			},
+			{
+				id: 12,
+				pId: 1,
+				name: "省开发委"
+			},
+			{
+				id: 13,
+				pId: 1,
+				name: "省教育厅"
+			},
+			{
+				id: 111,
+				pId: 12,
+				name: "陕西省体育局"
+			},
+			{
+				id: 112,
+				pId: 13,
+				name: "陕西省民政局"
+			},
+			{
+				id: 113,
+				pId: 11,
+				name: "陕西省卫生局"
+			},
+			{
+				id: 114,
+				pId: 113,
+				name: "陕西省教育局"
+			},
+			{
+				id: 3,
+				pId: 0,
+				name: "西安市碑林区"
+			},
+			{
+				id: 31,
+				pId: 3,
+				name: "碑林区区政府"
+			},
+			{
+				id: 32,
+				pId: 3,
+				name: "碑林区民政局"
+			}
+		];
+
+		function addDiyDom(treeId, treeNode) {
+			var spaceWidth = 5;
+			var switchObj = $("#" + treeNode.tId + "_switch"),
+				icoObj = $("#" + treeNode.tId + "_ico");
+			switchObj.remove();
+			icoObj.before(switchObj);
+
+			if(treeNode.level > 1) {
+				var spaceStr = "<span style='display: inline-block;width:" + (spaceWidth * treeNode.level) + "px'></span>";
+				switchObj.before(spaceStr);
+			}
+		}
+
+		function beforeClick(treeId, treeNode) {
+			if(treeNode.level == 0) {
+				var zTree = $.fn.zTree.getZTreeObj("treeDemo1");
+				zTree.expandNode(treeNode);
+				return false;
+			}
+			return true;
+		}
+
+		function beforeClick(treeId, treeNode) {
+			if(treeNode.level == 0) {
+				var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+				zTree.expandNode(treeNode);
+				return false;
+			}
+			return true;
+		}
+		$(document).ready(function() {
+			var treeObj = $("#treeDemo1");
+			$.fn.zTree.init(treeObj, setting, zNodes);
+			zTree_Menu = $.fn.zTree.getZTreeObj("treeDemo1");
+			curMenu = zTree_Menu.getNodes()[0].children[0].children[0];
+			zTree_Menu.selectNode(curMenu);
+
+			treeObj.hover(function() {
+				if(!treeObj.hasClass("showIcon")) {
+					treeObj.addClass("showIcon");
+				}
+			}, function() {
+				treeObj.removeClass("showIcon");
+			});
+		});
+
+		$(document).ready(function() {
+			var treeObj = $("#treeDemo");
+			$.fn.zTree.init(treeObj, setting, zNodes);
+			zTree_Menu = $.fn.zTree.getZTreeObj("treeDemo");
+			curMenu = zTree_Menu.getNodes()[0].children[0].children[0];
+			zTree_Menu.selectNode(curMenu);
+
+			treeObj.hover(function() {
+				if(!treeObj.hasClass("showIcon")) {
+					treeObj.addClass("showIcon");
+				}
+			}, function() {
+				treeObj.removeClass("showIcon");
+			});
+		});
+		//		ztree树结构 END
+
+		//     悬停显示
+		$(document).ready(function() {
+			$("#role_more li").hover(
+				function() {
+					$(this).addClass("hover").find("div.role_hidebox").show();
+				},
+
+				function() {
+					$(this).removeClass("hover").find("div.role_hidebox").hide();
+				}
+			);
+		});
+		//		悬停显示 END
+	</SCRIPT>
+<script>
+		//		sweetalert弹窗
+		$(document).ready(function() {
+			$(".i-checks").iCheck({
+				checkboxClass: "icheckbox_square-mainColor",
+				radioClass: "iradio_square-mainColor",
+			})
+		});
+		
+		
+		
+			$(".demo1").click(function() {
+				$(".showSweetAlert .confirm").attr("display", "none!important");
+				swal({
+					title: "操作成功",
+					text: "成功发布公告",
+					type: "success",
+					showCancelButton: false,
+					confirmButtonColor: "#fff",
+					//					confirmButtonText: "完成"
+				});
+				time();
+			});
+
+		});
+		
+		$(document).ready(function() {
+			$(".demo1").click(function() {
+				swal({
+						title: "您确定要删除这条信息吗",
+						text: "删除后将无法恢复，请谨慎操作！",
+						type: "warning",
+						showCancelButton: true,
+						confirmButtonColor: "#DD6B55",
+						confirmButtonText: "是的，我要删除！",
+						cancelButtonText: "让我再考虑一下…",
+						closeOnConfirm: false,
+						closeOnCancel: false,
+					},
+					function(isConfirm) {
+						if(isConfirm) {
+							swal("删除成功！", "您已经永久删除了这条信息。", "success")
+						} else {
+							swal("已取消", "您取消了删除操作！", "error")
+						}
+					})
+			});
+		});
+		//		sweetalert弹窗 END
+
+		//      下拉多选框 
+		$(document).ready(function() {
+			var config = {
+				".chosen-select": {},
+				".chosen-select-deselect": {
+					allow_single_deselect: !0
+				},
+				".chosen-select-no-single": {
+					disable_search_threshold: 10
+				},
+				".chosen-select-no-results": {
+					no_results_text: "对不起没有该信息"
+				},
+				".chosen-select-width": {
+					width: "95%"
+				}
+			};
+			for(var selector in config) $(selector).chosen(config[selector]);
+		});
+		//		下拉多选狂 END
+	</script>
+	  <script src="js/plugins/layer/laydate/laydate.js"></script>
+	 <script>
+        laydate({elem:"#hello",event:"focus"});var start={elem:"#start",format:"YYYY/MM/DD hh:mm:ss",min:laydate.now(),max:"2099-06-16 23:59:59",istime:true,istoday:false,choose:function(datas){end.min=datas;end.start=datas}};var end={elem:"#end",format:"YYYY/MM/DD hh:mm:ss",min:laydate.now(),max:"2099-06-16 23:59:59",istime:true,istoday:false,choose:function(datas){start.max=datas}};laydate(start);laydate(end);
+    </script>
+
+</html>

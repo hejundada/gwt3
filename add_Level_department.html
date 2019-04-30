@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+
+	
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>文件管理器</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+		<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+		<link href="css/btn.css" rel="stylesheet">
+		<link href="css/animate.min.css" rel="stylesheet">
+		<link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+		<link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+		<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+		<link href="css/style.shxy.css" rel="stylesheet">
+		<link href="css/font.css" rel="stylesheet">
+		<link rel="stylesheet" href="js/plugins/zTree/css/zTreeStyle.css" type="text/css">
+	</head>
+
+	<body class="gray-bg">
+		<div class="wrapper wrapper-content">
+			<div class="row">
+				<div class="nav-area">
+					<i class="fa fa-home nav-icon"></i>
+					<a href="#" class="nav-link">首页</a>
+					<span class="nav-break">&gt;&gt;</span>
+					<span class="nav-position">部门管理</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="ibox float-e-margins">
+						<div class="ibox-content">
+							<div class="ztree-box">
+								<div style="display: flex; width: 100%;">
+
+									<div style="display: block; width:74%; margin-right: 8px;">
+										<input class="form-control input-outline" type="text" placeholder="请输入部门名称">
+
+									</div>
+									<div style="width:100px; float:right;">
+										<button class="btn btn-block btn-addColor  pull-right" data-toggle="modal" data-target="#myModal" type="button"><i class="glyphicon glyphicon-plus"></i>&nbsp;新增部门</button>
+									</div>
+								</div>
+								<div class="zTreeDemoBackground left">
+									<ul id="treeDemo" class="ztree" style="height: 550px;">
+									</ul>
+									<div class="treeRightMenu">
+										<ul>
+											<li id="m_add"><i class="glyphicon glyphicon-plus"></i>新增部门</li>
+											<li id="m_rename"><i class="glyphicon glyphicon glyphicon-pencil"></i>重命名</li>
+											<li id="m_del" class="no-border"><i class="glyphicon glyphicon-trash"></i>删除部门</li>
+										</ul>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-9">
+
+					<div class="ibox float-e-margins">
+						<div class="ibox-title">
+							<span class="title-icon"></span>
+							<span class="title-font">
+    			                                    部门管理
+							<!--<h5>行政区域：&nbsp;陕西省 </h5>-->
+						</div>
+						<div class="ibox-content">
+							<div class="m-b-sm">
+								
+								<div class="col-sm-6">
+								<span class="icon-current"></span>
+							<h4 style="display: inline-block; margin-left: 6px;">当前位置：&nbsp;陕西省办公厅 </h4>
+						</div>
+						<div class="col-sm-6">
+							<div class="sort pull-right" style="margin-bottom: 12px;">
+								<span>排序：</span>
+								<button class="btn btn-info btn-sm btn-M0" type="button"><i class="fa icon-the-top"></i></button>
+								<button class="btn btn-info btn-sm btn-M0" type="button"><i class="fa icon-Upward"></i></button>
+								<button class="btn btn-info btn-sm btn-M0" type="button"><i class="fa icon-down"></i></button>
+								<button class="btn btn-info btn-sm btn-M0" type="button"><i class="fa icon-the-bottom"></i></button>
+							</div>
+						</div>
+					</div>
+					<table class="table table-bordered table-hover dataTables-example dataTable" style="margin-top: 5px;">
+                            <thead>
+                                <tr>                                
+                                    <th class="text-center">选择</th>                                    
+                                    <th class="text-center">部门名称</th>
+                                    <th class="text-center">部门全称</th>
+                                    <th class="text-center">部门地址</th>
+                                    <th class="text-center">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-center">
+                                	<td>
+                                		<input type="radio" class="radio i-checks" name="reorder" value="option1">
+                                	</td>
+                                    <td>1</td>
+                                    
+                                    <td>张三</td>
+                                    <td>男</td>
+                                    <td>
+                                    	<button class="btn-table-Operation nowrap" type="button"><i class="fa fa-edit"></i>&nbsp;编辑</button>
+									<button class="btn-table-Operation nowrap demo2" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button>
+                                    </td>
+                                    
+                                </tr>
+                                <tr class="text-center">
+                                	<td>
+                                		<input type="radio" class="radio i-checks" name="reorder" value="option2">
+                                	</td>
+                                    <td>2</td>
+                                    
+                                    <td>李四</td>
+                                    <td>男</td>
+                                    <td>
+                                    	<button class="btn-table-Operation nowrap" type="button"><i class="fa fa-edit"></i>&nbsp;编辑</button>
+									<button class="btn-table-Operation nowrap demo2" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button>
+                                    </td>
+                                    
+                                </tr>
+                                <tr class="text-center">
+                                	<td>
+                                		<input type="radio" class="radio i-checks" name="reorder" value="option3">
+                                	</td>
+                                    <td>3</td>
+                                    
+                                    <td>王麻子</td>
+                                    <td>男</td>
+                                    <td>
+                                    	<button class="btn-table-Operation nowrap" type="button"><i class="fa fa-edit"></i>&nbsp;编辑</button>
+									<button class="btn-table-Operation nowrap demo2" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button>
+                                    </td>
+                                    
+                                </tr>
+                                <tr class="text-center">
+                                	<td>
+                                		<input type="radio" class="radio i-checks" name="reorder" value="option3">
+                                	</td>
+                                    <td>3</td>
+                                    
+                                    <td>王麻子</td>
+                                    <td>男</td>
+                                    <td>
+                                    	<button class="btn-table-Operation nowrap" type="button"><i class="fa fa-edit"></i>&nbsp;编辑</button>
+									<button class="btn-table-Operation nowrap demo2" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button>
+                                    </td>
+                                    
+                                </tr>
+                                <tr class="text-center">
+                                	<td>
+                                		<input type="radio" class="radio i-checks" name="reorder" value="option3">
+                                	</td>
+                                    <td>3</td>
+                                    
+                                    <td>王麻子</td>
+                                    <td>男</td>
+                                    <td>
+                                    	<button class="btn-table-Operation nowrap" type="button"><i class="fa fa-edit"></i>&nbsp;编辑</button>
+									<button class="btn-table-Operation nowrap demo2" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button>
+                                    </td>
+                                    
+                                </tr>
+                                <tr class="text-center">
+                                	<td>
+                                		<input type="radio" class="radio i-checks" name="reorder" value="option3">
+                                	</td>
+                                    <td>3</td>
+                                    
+                                    <td>王麻子</td>
+                                    <td>男</td>
+                                    <td>
+                                    	<button class="btn-table-Operation nowrap" type="button"><i class="fa fa-edit"></i>&nbsp;编辑</button>
+									<button class="btn-table-Operation nowrap demo2" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button>
+                                    </td>
+                                    
+                                </tr>
+                                <tr class="text-center">
+                                	<td>
+                                		<input type="radio" class="radio i-checks" name="reorder" value="option3">
+                                	</td>
+                                    <td>3</td>
+                                    
+                                    <td>王麻子</td>
+                                    <td>男</td>
+                                    <td>
+                                    	<button class="btn-table-Operation nowrap" type="button"><i class="fa fa-edit"></i>&nbsp;编辑</button>
+									<button class="btn-table-Operation nowrap demo2" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button>
+                                    </td>
+                                    
+                                </tr>
+                                <tr class="text-center">
+                                	<td>
+                                		<input type="radio" class="radio i-checks" name="reorder" value="option3">
+                                	</td>
+                                    <td>3</td>
+                                    
+                                    <td>王麻子</td>
+                                    <td>男</td>
+                                    <td>
+                                    	<button class="btn-table-Operation nowrap" type="button"><i class="fa fa-edit"></i>&nbsp;编辑</button>
+									<button class="btn-table-Operation nowrap demo2" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button>
+                                    </td>
+                                    
+                                </tr>
+                                <tr class="text-center">
+                                	<td>
+                                		<input type="radio" class="radio i-checks" name="reorder" value="option3">
+                                	</td>
+                                    <td>3</td>
+                                    
+                                    <td>王麻子</td>
+                                    <td>男</td>
+                                    <td>
+                                    	<button class="btn-table-Operation nowrap" type="button"><i class="fa fa-edit"></i>&nbsp;编辑</button>
+									<button class="btn-table-Operation nowrap demo2" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button>
+                                    </td>
+                                    
+                                </tr>
+                                <tr class="text-center">
+                                	<td>
+                                		<input type="radio" class="radio i-checks" name="reorder" value="option3">
+                                	</td>
+                                    <td>3</td>
+                                    
+                                    <td>王麻子</td>
+                                    <td>男</td>
+                                    <td>
+                                    	<button class="btn-table-Operation nowrap" type="button"><i class="fa fa-edit"></i>&nbsp;编辑</button>
+									<button class="btn-table-Operation nowrap demo2" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button>
+                                    </td>
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+        <!--新增部门弹窗-->
+		<div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog-600">
+				<div class="modal-content animated fadeIn">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span> </button>
+						<!--<i class="fa fa-laptop modal-icon"></i>-->
+						<h4 class="modal-title">新增部门</h4>
+						<!--<small class="font-bold">这里可以显示副标题。</small>-->
+					</div>
+					<div class="modal-body">
+						<div class="modal-content-m">
+							<form method="get" class="form-horizontal">
+								<div class="form-group">
+									<label class="col-sm-2 control-label"><span class="red">*&nbsp;</span>所属区域</label>
+									<div class="col-sm-10">
+										<div class="" style="display: flex;">
+											<select class="form-control  col-sm-4 m-r-xs" name="account">
+												<option>陕西省</option>
+												<option>青海省</option>
+												<option>----</option>
+											</select>
+											<select class="form-control  col-sm-4 m-r-xs" name="account">
+												<option>西安市</option>
+												<option>宝鸡市</option>
+												<option>铜川市</option>
+											</select>
+											<select class="form-control  col-sm-4 " name="account">
+												<option>碑林区</option>
+												<option>莲湖区</option>
+												<option>雁塔区</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label"><span class="red">*&nbsp;</span>部门名称</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label"><span class="red">*&nbsp;</span>部门全称</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label"><span class="red">*&nbsp;</span>部门类型</label>
+									<div class="col-sm-10">
+										<select class="form-control" name="account">
+											<option>请选择部门类型</option>
+											<option>科长</option>
+											<option>科员</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label">部门地址</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">备注</label>
+									<div class="col-sm-10">
+										<textarea type="text" class="form-control"></textarea>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-white" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-mainColor demo1" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--新增部门弹窗-->
+	</body>
+	<script src="js/jquery.min.js?v=2.1.4"></script>
+	<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+	<script src="js/plugins/iCheck/icheck.min.js"></script>
+	<script src="js/bootstrap.min.js?v=3.3.6"></script>
+	<script type="text/javascript" src="js/plugins/zTree/js/jquery.ztree.core.js"></script>
+	<!--ztree树形结构-->
+	<SCRIPT type="text/javascript">
+		var curMenu = null,
+			zTree_Menu = null;
+		var setting = {
+			view: {
+				showLine: false,
+				showIcon: false,
+				selectedMulti: false,
+				dblClickExpand: false,
+				addDiyDom: addDiyDom
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeClick: beforeClick
+			}
+		};
+
+		var zNodes = [{
+				id: 1,
+				pId: 0,
+				name: "陕西省",
+				open: true
+			},
+			{
+				id: 11,
+				pId: 1,
+				name: "省政府办公厅"
+			},
+			{
+				id: 12,
+				pId: 1,
+				name: "省开发委"
+			},
+			{
+				id: 13,
+				pId: 1,
+				name: "省教育厅"
+			},
+			{
+				id: 111,
+				pId: 12,
+				name: "陕西省体育局"
+			},
+			{
+				id: 112,
+				pId: 13,
+				name: "陕西省民政局"
+			},
+			{
+				id: 113,
+				pId: 11,
+				name: "陕西省卫生局"
+			},
+			{
+				id: 114,
+				pId: 113,
+				name: "陕西省教育局"
+			},
+			{
+				id: 3,
+				pId: 0,
+				name: "西安市碑林区"
+			},
+			{
+				id: 31,
+				pId: 3,
+				name: "碑林区区政府"
+			},
+			{
+				id: 32,
+				pId: 3,
+				name: "碑林区民政局"
+			}
+		];
+
+		function addDiyDom(treeId, treeNode) {
+			var spaceWidth = 5;
+			var switchObj = $("#" + treeNode.tId + "_switch"),
+				icoObj = $("#" + treeNode.tId + "_ico");
+			switchObj.remove();
+			icoObj.before(switchObj);
+
+			if(treeNode.level > 1) {
+				var spaceStr = "<span style='display: inline-block;width:" + (spaceWidth * treeNode.level) + "px'></span>";
+				switchObj.before(spaceStr);
+			}
+		}
+
+		function beforeClick(treeId, treeNode) {
+			if(treeNode.level == 0) {
+				var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+				zTree.expandNode(treeNode);
+				return false;
+			}
+			return true;
+		}
+
+		$(document).ready(function() {
+			var treeObj = $("#treeDemo");
+			$.fn.zTree.init(treeObj, setting, zNodes);
+			zTree_Menu = $.fn.zTree.getZTreeObj("treeDemo");
+			curMenu = zTree_Menu.getNodes()[0].children[0].children[0];
+			zTree_Menu.selectNode(curMenu);
+
+			treeObj.hover(function() {
+				if(!treeObj.hasClass("showIcon")) {
+					treeObj.addClass("showIcon");
+				}
+			}, function() {
+				treeObj.removeClass("showIcon");
+			});
+		});
+
+
+		
+	</SCRIPT>
+	<!--ztree树形结构 END-->
+	
+	<script>
+
+		$(document).ready(function() {
+			
+//		radio样式
+			$(".i-checks").iCheck({
+				checkboxClass: "icheckbox_square-mainColor",
+				radioClass: "iradio_square-mainColor",
+			});
+//			radio样式 END
+
+//          sweetalert弹窗
+			var wait = 2;
+
+			function time() {
+				if(wait == 0) {
+					$(".showSweetAlert .confirm").click();
+					wait = 2;
+				} else {
+					wait--;
+					setTimeout(function() {
+							time()
+						},
+						600)
+				}
+			};
+			$(".demo1").click(function() {
+				$(".showSweetAlert .confirm").attr("display", "none!important");
+				swal({
+					title: "操作成功",
+					text: "成功添加部门",
+					type: "success",
+					showCancelButton: false,
+					confirmButtonColor: "#fff",
+					//					confirmButtonText: "完成"
+				});
+				time();
+			});
+
+			$(".demo2").click(function() {
+				swal({
+						title: "您确定要删除这条信息吗",
+						text: "删除后将无法恢复，请谨慎操作！",
+						type: "warning",
+						showCancelButton: true,
+						confirmButtonColor: "#DD6B55",
+						confirmButtonText: "是的，我要删除！",
+						cancelButtonText: "让我再考虑一下…",
+						closeOnConfirm: false,
+						closeOnCancel: false,
+					},
+					function(isConfirm) {
+						if(isConfirm) {
+							swal("删除成功！", "您已经永久删除了这条信息。", "success")
+						} else {
+							swal("已取消", "您取消了删除操作！", "error")
+						}
+					})
+			})
+
+		})
+//		sweetalert弹窗 END
+	</script>
+
+</html>

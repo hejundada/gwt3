@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>草稿箱</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+<link href="css/btn.css" rel="stylesheet">
+<link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+<link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+<link href="css/style.shxy.css" rel="stylesheet">
+<link href="css/font.css" rel="stylesheet">
+<link rel="stylesheet" href="js/plugins/zTree/css/zTreeStyle.css" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="js/plugins/Calendar/stylesheets/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+  <div class="row">
+    <div class="nav-area"> <i class="fa fa-home nav-icon"></i> <a href="#" class="nav-link">首页</a> <span class="nav-break">>></span> <span class="nav-position">草稿箱</span> </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="ibox float-e-margins animated fadeInRight">
+        <div class="ibox-title"> <span class="title-icon"></span> <span class="title-font"> 草稿箱 </span> </div>
+        <div class="ibox-content" >
+          <div class="m-b-sm m-l-n">
+            <div  class="col-sm-7">
+              <div class="col-sm-4">
+                <select class="form-control m-b" name="account">
+                  <option>选择通知类型</option>
+                  <option>会议通知</option>
+                  <option>通知</option>
+                  <option>材料征集</option>
+                </select>
+              </div>
+              <div class="col-sm-8" id="hello">
+                <input placeholder="开始日期" class="form-control layer-date col-sm-6 B-datepicker date-icon" id="start">
+                <input placeholder="结束日期" class="form-control layer-date col-sm-6 E-datepicker date-icon" id="end">
+              </div>
+            </div>
+            <div  class="col-sm-5">
+              <div style="display: flex;" class="m-r-n-xs">
+                <div style="display: block; width: 100%; margin-right: 8px;">
+                  <input class="form-control input-outline" type="text" placeholder="请输入标题">
+                </div>
+                <div style="width:70px; float: right;">
+                  <button class="btn btn-mainColor" type="button"><i class="fa fa-search"></i>&nbsp;搜索</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--列表-->
+          
+          <table class="table table-bordered table-hover dataTables-example dataTable table-onepiece" >
+            <thead>
+              <tr>
+                <th class="text-center">通知类型</th>
+                <th class="text-center">通知标题</th>
+                <th class="text-center">保存时间</th>
+                <th class="text-center">操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="gradeX text-center" style="cursor: pointer;" >
+                <td>会议通知</td>
+                <td>全国重点美术院校学习贯彻习近平新时代文艺思想座谈会在西安召开</td>
+                <td> 2017-12-13 23:14 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='会议通知.html'">
+                <td>会议通知</td>
+                <td>全省建设法治政府推进大会召开</td>
+                <td> 2017-12-11 12:23 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='会议通知.html'">
+                <td>会议通知</td>
+                <td>公民代表走进省政府了解大气污染防治工作</td>
+                <td> 2017-09-11 12:23 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='会议通知.html'">
+                <td>会议通知</td>
+                <td>全国重点美术院校学习贯彻习近平新时代文艺思想座谈会在西安召开</td>
+                <td> 2017-12-13 23:14 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='会议通知.html'">
+                <td>会议通知</td>
+                <td>全省建设法治政府推进大会召开</td>
+                <td> 2017-12-11 12:23 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='会议通知.html'">
+                <td>会议通知</td>
+                <td>公民代表走进省政府了解大气污染防治工作</td>
+                <td> 2017-09-11 12:23 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='会议通知.html'">
+                <td>会议通知</td>
+                <td>全省建设法治政府推进大会召开</td>
+                <td> 2017-12-11 12:23 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='会议通知.html'">
+                <td>会议通知</td>
+                <td>公民代表走进省政府了解大气污染防治工作</td>
+                <td> 2017-09-11 12:23 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='会议通知.html'">
+                <td>会议通知</td>
+                <td>全国重点美术院校学习贯彻习近平新时代文艺思想座谈会在西安召开</td>
+                <td> 2017-12-13 23:14 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='会议通知.html'">
+                <td>会议通知</td>
+                <td>全省建设法治政府推进大会召开</td>
+                <td> 2017-12-11 12:23 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='会议通知.html'">
+                <td>会议通知</td>
+                <td>全国重点美术院校学习贯彻习近平新时代文艺思想座谈会在西安召开</td>
+                <td> 2017-12-13 23:14 </td>
+                <td><button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button></td>
+              </tr>
+            </tbody>
+          </table>
+          
+            <ul id="sysAppItemPage" class="pagination">
+              <li class="page-item page-info disabled pull-left" >显示第1至6项结果，共6项</li>
+               <li class="page-item first disabled pull-right"><a href="#" class="page-link">尾页</a></li>
+              <li class="page-item next disabled pull-right"><a href="#" class="page-link">下一页</a></li>
+              <li class="page-item active pull-right"> <a href="#" class="page-link">5</a> </li>
+              <li class="page-item pull-right"> <a href="#" class="page-link">4</a> </li>
+              <li class="page-item pull-right"> <a href="#" class="page-link">3</a> </li>
+              <li class="page-item pull-right"> <a href="#" class="page-link">2</a> </li>
+              <li class="page-item pull-right"> <a href="#" class="page-link pull-right">1</a> </li>
+              <li class="page-item prev disabled pull-right"><a href="#" class="page-link">上一页</a></li>
+             
+              <li class="page-item last disabled pull-right"><a href="#" class="page-link">首页</a></li>
+            </ul>
+         
+          <!--列表 END--> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript" src="js/plugins/Calendar/javascripts/simple-calendar.js"></script>
+<script>
+     var myCalendar = new SimpleCalendar('#calendar');
+    </script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>
+<script src="js/content.min.js?v=1.0.0"></script>
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="js/plugins/chosen/chosen.jquery.js"></script>
+<script type="text/javascript" src="js/plugins/zTree/js/jquery.ztree.core.js"></script>
+<script>
+		
+//		radio样式
+		$(document).ready(function() {
+			$(".i-checks").iCheck({
+				checkboxClass: "icheckbox_square-mainColor",
+				radioClass: "iradio_square-mainColor",
+			})
+		});
+//		radio样式 END
+
+//      sweetalert弹窗
+	
+$(document).ready(function() {
+			$(".demo4").click(function() {
+				 event.stopPropagation();
+				swal({
+                        title: "您确定要删除这条信息吗",
+						text: "删除后将无法恢复，请谨慎操作！",
+						type: "warning",
+						showCancelButton: true,
+						confirmButtonColor: "#DD6B55",
+						confirmButtonText: "是的，我要删除！",
+						cancelButtonText: "让我再考虑一下…",
+						closeOnConfirm: false,
+						closeOnCancel: false,
+                     }).then(function(isConfirm) {
+                  if (isConfirm) {
+                  swal({
+      type: 'success',
+	  title: "删除成功",
+	  text: "您已永久删除本条信息",
+		 showConfirmButton: false,
+	  timer: 1500
+    });
+  }
+})
+				
+			});
+		});
+//      sweetalert弹窗 END
+</script>
+<script src="js/plugins/layer/laydate/laydate.js"></script>
+<script>
+        laydate({elem:"#hello",event:"focus"});var start={elem:"#start",format:"YYYY/MM/DD hh:mm:ss",min:laydate.now(),max:"2099-06-16 23:59:59",istime:true,istoday:false,choose:function(datas){end.min=datas;end.start=datas}};var end={elem:"#end",format:"YYYY/MM/DD hh:mm:ss",min:laydate.now(),max:"2099-06-16 23:59:59",istime:true,istoday:false,choose:function(datas){start.max=datas}};laydate(start);laydate(end);
+    </script>
+</html>

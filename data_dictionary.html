@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+
+	
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>文件管理器</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+		<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+		<link href="css/btn.css" rel="stylesheet">
+		<link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+		<link href="css/animate.min.css" rel="stylesheet">
+		<link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+		<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+		<link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+		<link href="css/style.shxy.css" rel="stylesheet">
+		<link href="css/font.css" rel="stylesheet">
+		<link rel="stylesheet" href="js/plugins/zTree/css/zTreeStyle.css" type="text/css">
+	</head>
+
+	<body class="gray-bg">
+		<div class="wrapper wrapper-content">
+			<div class="row">
+				<div class="nav-area">
+					<i class="fa fa-home nav-icon"></i>
+					<a href="#" class="nav-link">首页</a>
+					<span class="nav-break">>></span>
+					<span class="nav-position">数据字典</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="ibox float-e-margins">
+						<div class="ibox-content">
+							<div class="search">
+								<input class="form-control input-outline width-100 m-b-sm" type="text" placeholder="请输入部门名称">
+								<div class="button-area">
+									<button class="btn btn-primary" type="button"><i class="glyphicon glyphicon-plus"></i>&nbsp;新增</button>
+									<button class="btn btn-warning" type="button"><i class="fa fa-edit"></i>&nbsp;编辑</button>
+									<button class="btn btn-danger demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button>
+								</div>
+							</div>
+							<div>
+							<div class="tabs-container">
+                                <div class="tabs-left data-ul">
+                                    <ul class="nav nav-tabs dictionary-ul">
+                                        <li class="active">
+                                        	<a data-toggle="tab" href="#tab-1">区域</a>
+                                        </li>
+                                        <li class="">
+                                        	<a data-toggle="tab" href="#tab-2">部门管理</a>
+                                        </li>
+                                        <li class="">
+                                        	<a data-toggle="tab" href="#tab-3">用户级别</a>
+                                        </li>
+                                        <li class="">
+                                        	<a data-toggle="tab" href="#tab-4">用户权限</a>
+                                        </li>
+                                        <li class="">
+                                        	<a data-toggle="tab" href="#tab-5">用户管理</a>
+                                        </li>
+                                        <li class="">
+                                        	<a data-toggle="tab" href="#tab-6">部门管理</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+								<!--<div class="">
+									<ul class="">
+										<li><a href="#">区域</a></li>
+										<li><a href="404.html">部门管理</a></li>
+										<li><a>用户级别</a></li>
+										<li><a>用户权限</a></li>
+										<li><a>部门管理</a></li>
+										<li><a>用户管理</a></li>
+										<li><a>用户管理</a></li>
+										<li><a>用户管理</a></li>
+									</ul>
+								</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-9">
+					<div class="ibox float-e-margins">
+						<div class="ibox-title">
+							<span class="title-icon"></span>
+							<span class="title-font">
+    			                                                区域<!--对应右侧选中-->
+    		                </span>
+						</div>
+						<div class="ibox-content">
+							<div class="row" style="margin:0 -6px;">
+								<div class="col-sm-4" style="padding-right: 15px;">
+									<div class="ztree-box">
+										<div class="search">
+											<input class="form-control input-outline width-100 m-b-sm" type="text" placeholder="请输入部门名称">
+											<div class="button-area">
+												<button class="btn btn-primary" type="button"><i class="glyphicon glyphicon-plus"></i>&nbsp;新增</button>
+												<button class="btn btn-warning" type="button"><i class="fa fa-edit"></i>&nbsp;编辑</button>
+												<button class="btn btn-danger demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button>
+											</div>
+										</div>
+
+										<div class="zTreeDemoBackground left">
+											<ul id="treeDemo" class="ztree m-t-none" style="height: 562px;">
+											</ul>
+											<div class="treeRightMenu">
+												<ul>
+													<li id="m_add"><i class="glyphicon glyphicon-plus"></i>新增部门</li>
+													<li id="m_rename"><i class="glyphicon glyphicon glyphicon-pencil"></i>重命名</li>
+													<li id="m_del" class="no-border"><i class="glyphicon glyphicon-trash"></i>删除部门</li>
+												</ul>
+											</div>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="col-sm-8 dictionary-info-area" style="">
+									<div class="dictionary-father-area">
+										<div>
+											<span class="icon-current"></span>
+											<span class="father-area">&nbsp;父节点：&nbsp;<span>陕西省办公厅 </span>
+										</div>
+									</div>
+									<form method="get" class="form-horizontal">
+										<!--字典项-->
+										<div class="form-group m-b-lg">
+											<label class="col-sm-2 control-label"><span class="red">*&nbsp;</span>字典名称</label>
+
+											<div class="col-sm-6">
+												<input type="text" class="form-control" placeholder="省办公厅">
+											</div>
+										</div>
+
+										<div class="form-group m-b-lg">
+											<label class="col-sm-2 control-label"><span class="red">*&nbsp;</span>字典值</label>
+
+											<div class="col-sm-6">
+												<input type="text" class="form-control" placeholder="DEPT_TYPE_1">
+											</div>
+										</div>
+										<div class="form-group m-b-lg">
+											<label class="col-sm-2 control-label">自定义Key</label>
+											<div class="col-sm-6 no-padding">
+												<div class="col-sm-12">
+													<input type="text" class="form-control" placeholder="643111100089">
+												</div>
+
+											</div>
+										</div>
+										<div class="form-group" style="margin-bottom:80px;">
+											<label class="col-sm-2 control-label">序号</label>
+											<div class="col-sm-6 no-padding">
+												<div class="col-sm-12">
+													<input type="text" class="form-control" placeholder="9527">
+												</div>
+
+											</div>
+										</div>
+										<!--字典项 END-->
+
+										<!--字典分类-->
+										<!--<div class="form-group" style="margin-bottom:30px;">
+											<label class="col-sm-2 control-label"><span class="red">*&nbsp;</span>名称</label>
+
+											<div class="col-sm-6">
+												<input type="text" class="form-control" placeholder="省办公厅">
+											</div>
+										</div>
+										
+										<div class="form-group" style="margin-bottom:30px;">
+											<label class="col-sm-2 control-label">所属模块</label>
+
+											<div class="col-sm-6">
+												<input type="text" class="form-control" placeholder="DEPT_TYPE_1">
+											</div>
+										</div>
+										<div class="form-group" style="margin-bottom:30px;">
+											<label class="col-sm-2 control-label"><span class="red">*&nbsp;</span>字典分类Key</label>
+											<div class="col-sm-6 no-padding">
+												<div class="col-sm-12">
+													<input type="text" class="form-control" placeholder="643111100089">
+												</div>
+												
+											</div>
+										</div>
+										<div class="form-group" style="margin-bottom:80px;">
+											<label class="col-sm-2 control-label">序号</label>
+											<div class="col-sm-6 no-padding">
+												<div class="col-sm-12">
+													<input type="text" class="form-control" placeholder="9527">
+												</div>
+												
+											</div>
+										</div>-->
+										<!--字典分类 END-->
+										
+										<div class="hr-line-solid"></div>
+										<div class="form-group">
+											<div class="col-sm-8 text-right">
+												<button type="button" class="btn btn-white" onclick="location.href='app_management.html'">取消</button>
+												<button type="button" class="btn btn-mainColor demo1">确定</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js?v=3.3.6"></script>
+	<script src="js/content.min.js?v=1.0.0"></script>
+	<script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
+	<script type="text/javascript" src="js/plugins/zTree/js/jquery.ztree.core.js"></script>
+    <!--ztree树形结构-->
+	<SCRIPT type="text/javascript">
+		var curMenu = null,
+			zTree_Menu = null;
+		var setting = {
+			check: {
+				enable: true
+			},
+			view: {
+				showLine: false,
+				showIcon: false,
+				selectedMulti: false,
+				dblClickExpand: false,
+				addDiyDom: addDiyDom
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeClick: beforeClick
+			}
+		};
+
+		var zNodes = [{
+				id: 1,
+				pId: 0,
+				name: "陕西省",
+				open: true
+			},
+			{
+				id: 11,
+				pId: 1,
+				name: "省政府办公厅"
+			},
+			{
+				id: 12,
+				pId: 1,
+				name: "省开发委"
+			},
+			{
+				id: 13,
+				pId: 1,
+				name: "省教育厅"
+			},
+			{
+				id: 111,
+				pId: 12,
+				name: "陕西省体育局"
+			},
+			{
+				id: 112,
+				pId: 13,
+				name: "陕西省民政局"
+			},
+			{
+				id: 113,
+				pId: 11,
+				name: "陕西省卫生局"
+			},
+			{
+				id: 114,
+				pId: 113,
+				name: "陕西省教育局"
+			},
+			{
+				id: 3,
+				pId: 0,
+				name: "西安市碑林区"
+			},
+			{
+				id: 31,
+				pId: 3,
+				name: "碑林区区政府"
+			},
+			{
+				id: 32,
+				pId: 3,
+				name: "碑林区民政局"
+			}
+		];
+
+		function addDiyDom(treeId, treeNode) {
+			var spaceWidth = 5;
+			var switchObj = $("#" + treeNode.tId + "_switch"),
+				icoObj = $("#" + treeNode.tId + "_ico");
+			switchObj.remove();
+			icoObj.before(switchObj);
+
+			if(treeNode.level > 1) {
+				var spaceStr = "<span style='display: inline-block;width:" + (spaceWidth * treeNode.level) + "px'></span>";
+				switchObj.before(spaceStr);
+			}
+		}
+
+		function beforeClick(treeId, treeNode) {
+			if(treeNode.level == 0) {
+				var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+				zTree.expandNode(treeNode);
+				return false;
+			}
+			return true;
+		}
+
+		$(document).ready(function() {
+			var treeObj = $("#treeDemo");
+			$.fn.zTree.init(treeObj, setting, zNodes);
+			zTree_Menu = $.fn.zTree.getZTreeObj("treeDemo");
+			curMenu = zTree_Menu.getNodes()[0].children[0].children[0];
+			zTree_Menu.selectNode(curMenu);
+
+			treeObj.hover(function() {
+				if(!treeObj.hasClass("showIcon")) {
+					treeObj.addClass("showIcon");
+				}
+			}, function() {
+				treeObj.removeClass("showIcon");
+			});
+		});
+	</SCRIPT>
+	<!--ztree树形结构 END-->	
+	<script>
+		
+//		radio样式
+		$(document).ready(function() {
+			$(".i-checks").iCheck({
+				checkboxClass: "icheckbox_square-mainColor",
+				radioClass: "iradio_square-mainColor",
+			})
+		});
+//		radio样式 END
+
+//      sweetalert弹窗
+		$(document).ready(function() {
+			$(".demo5").click(function() {
+				swal({
+					title: "您的手机号已变更",
+					text: "手机号已经变更为：13698596985，原登录密码不变。",
+					type: "info",
+					showCancelButton: false,
+					confirmButtonColor: "#3ba4f5",
+					confirmButtonText: "确认"
+				})
+			})
+		});
+
+		$(document).ready(function() {
+			var wait = 2;
+
+			function time() {
+				if(wait == 0) {
+					$(".showSweetAlert .confirm").click();
+					wait = 2;
+				} else {
+					wait--;
+					setTimeout(function() {
+							time()
+						},
+						600)
+				}
+			};
+			$(".demo1").click(function() {
+				$(".showSweetAlert .confirm").attr("display", "none!important");
+				swal({
+					title: "编辑成功",
+					text: "成功修改该信息",
+					type: "success",
+					showCancelButton: false,
+					confirmButtonColor: "#fff",
+					//					confirmButtonText: "完成"
+				});
+				time();
+			});
+
+		});
+
+		$(document).ready(function() {
+			$(".demo4").click(function() {
+				swal({
+						title: "您确定要删除这条信息吗",
+						text: "删除后将无法恢复，请谨慎操作！",
+						type: "warning",
+						showCancelButton: true,
+						confirmButtonColor: "#DD6B55",
+						confirmButtonText: "是的，我要删除！",
+						cancelButtonText: "让我再考虑一下…",
+						closeOnConfirm: false,
+						closeOnCancel: false,
+					},
+					function(isConfirm) {
+						if(isConfirm) {
+							swal("删除成功！", "您已经永久删除了这条信息。", "success")
+						} else {
+							swal("已取消", "您取消了删除操作！", "error")
+						}
+					})
+			});
+		});
+//      sweetalert弹窗 END
+</script>
+
+</html>

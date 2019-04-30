@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+	
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>文件管理器</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+		<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+		<link href="css/btn.css" rel="stylesheet">
+		<link href="css/animate.min.css" rel="stylesheet">
+		<link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+		<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+		<link href="css/style.shxy.css" rel="stylesheet">
+		<link href="css/font.css" rel="stylesheet">
+		<link href="js/plugins/layer/laydate/need/laydate.css">
+		<link href="js/plugins/layer/laydate/skin/default/laydate.css">
+	</head>
+
+	<body class="gray-bg">
+		<div class="wrapper wrapper-content">
+			<div class="row">
+				<div class="nav-area">
+					<i class="fa fa-home nav-icon"></i>
+					<a href="#" class="nav-link">首页</a>
+					<span class="nav-break">>></span>
+
+					<span class="nav-position">已转发通知</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="ibox float-e-margins">
+						<div class="ibox-title">
+							<span class="title-icon"></span>
+							<span class="title-font">
+    			已转发通知
+    		</span>
+						</div>
+						<div class="ibox-content">
+
+							<div class="col-sm-12">
+								<div class="col-sm-2">
+									<select class="form-control m-b" name="account">
+										<option>选择通知类型</option>
+										<option>会议通知</option>
+                  <option>通知</option>
+                  <option>材料征集</option>
+									</select>
+								</div>
+								<div class="col-sm-6" id="hello">
+									<input placeholder="开始日期" class="form-control layer-date col-sm-6 B-datepicker date-icon" id="start">
+									<input placeholder="结束日期" class="form-control layer-date col-sm-6 E-datepicker date-icon" id="end">
+								</div>
+								<div class="col-sm-3 ">
+									<input type="text" placeholder="请输入标题名称" class="form-control">
+								</div>
+								<div class="col-sm-1">
+									<button class="btn btn-mainColor" type="button"><i class="fa fa-search"></i>&nbsp;搜索</button>
+								</div>
+							</div>
+
+							<table class="table table-bordered table-hover dataTables-example dataTable table-onepiece" style="margin-top: 5px;">
+								<thead>
+									<tr>
+										<th class="text-center">通知类型</th>
+										<th class="text-center">通知标题</th>
+										<th class="text-center">转发时间</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已转发通知-通知详情.html'">
+										<td>会议通知</td>
+										<td>全国重点美术院校学习贯彻习近平新时代文艺思想座谈会在西安召开</td>
+										<td>
+											2017-12-13 23:14
+										</td>
+									</tr>
+									<tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已转发通知-通知详情.html'">
+										<td>会议通知</td>
+										<td>全省建设法治政府推进大会召开</td>
+										<td>
+											2017-12-11 12:23
+										</td>
+									</tr>
+									<tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已转发通知-通知详情.html'">
+										<td>会议通知</td>
+										<td>公民代表走进省政府了解大气污染防治工作</td>
+										<td>
+											2017-09-11 12:23
+										</td>
+									</tr>
+									<tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已转发通知-通知详情.html'">
+										<td>会议通知</td>
+										<td>全国重点美术院校学习贯彻习近平新时代文艺思想座谈会在西安召开</td>
+										<td>
+											2017-12-13 23:14
+										</td>
+									</tr>
+									<tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已转发通知-通知详情.html'">
+										<td>会议通知</td>
+										<td>全省建设法治政府推进大会召开</td>
+										<td>
+											2017-12-11 12:23
+										</td>
+									</tr>
+									<tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已转发通知-通知详情.html'">
+										<td>会议通知</td>
+										<td>公民代表走进省政府了解大气污染防治工作</td>
+										<td>
+											2017-09-11 12:23
+										</td>
+									</tr>
+									<tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已转发通知-通知详情.html'">
+										<td>会议通知</td>
+										<td>全省建设法治政府推进大会召开</td>
+										<td>
+											2017-12-11 12:23
+										</td>
+									</tr>
+									<tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已转发通知-通知详情.html'">
+										<td>会议通知</td>
+										<td>公民代表走进省政府了解大气污染防治工作</td>
+										<td>
+											2017-09-11 12:23
+										</td>
+									</tr>
+									<tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已转发通知-通知详情.html'">
+										<td>会议通知</td>
+										<td>全国重点美术院校学习贯彻习近平新时代文艺思想座谈会在西安召开</td>
+										<td>
+											2017-12-13 23:14
+										</td>
+									</tr>
+									<tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已转发通知-通知详情.html'">
+										<td>会议通知</td>
+										<td>全省建设法治政府推进大会召开</td>
+										<td>
+											2017-12-11 12:23
+										</td>
+									</tr>
+									<tr class="gradeX text-center" style="cursor: pointer;" onclick="location.href='已转发通知-通知详情.html'">
+										<td>会议通知</td>
+										<td>全国重点美术院校学习贯彻习近平新时代文艺思想座谈会在西安召开</td>
+										<td>
+											2017-12-13 23:14
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="js/jquery.min.js?v=2.1.4"></script>
+	<script src="js/plugins/iCheck/icheck.min.js"></script>
+	<!--单选多选-->
+	<script src="js/bootstrap.min.js?v=3.3.6"></script>
+	<script src="js/plugins/layer/laydate/laydate.js"></script>
+	<!--radio样式-->
+	<script>
+		$(document).ready(function() {
+			$(".i-checks").iCheck({
+				checkboxClass: "icheckbox_square-mainColor",
+				radioClass: "iradio_square-mainColor",
+			})
+		});
+
+		laydate({
+			elem: "#hello",
+			event: "focus"
+		});
+		var start = {
+			elem: "#start",
+			format: "YYYY/MM/DD hh:mm:ss",
+			min: laydate.now(),
+			max: "2099-06-16 23:59:59",
+			istime: true,
+			istoday: false,
+			choose: function(datas) {
+				end.min = datas;
+				end.start = datas
+			}
+		};
+		var end = {
+			elem: "#end",
+			format: "YYYY/MM/DD hh:mm:ss",
+			min: laydate.now(),
+			max: "2099-06-16 23:59:59",
+			istime: true,
+			istoday: false,
+			choose: function(datas) {
+				start.max = datas
+			}
+		};
+		laydate(start);
+		laydate(end);
+	</script>
+	<!--radio样式 END-->
+
+</html>

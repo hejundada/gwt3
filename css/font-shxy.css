@@ -1,0 +1,174 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/shxy-icomoon.eot?121sg2');
+  src:  url('../fonts/shxy-icomoon.eot?121sg2#iefix') format('embedded-opentype'),
+    url('../fonts/shxy-icomoon.ttf?121sg2') format('truetype'),
+    url('../fonts/shxy-icomoon.woff?121sg2') format('woff'),
+    url('../fonts/shxy-icomoon.svg?121sg2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-address:before {
+  content: "\e90a";
+  color: #999;
+}
+.icon-addUser:before {
+  content: "\e90b";
+  color: #898989;
+}
+.icon-announcement:before {
+  content: "\e90c";
+  color: #898989;
+}
+.icon-application:before {
+  content: "\e90d";
+  color: #999;
+}
+.icon-clock:before {
+  content: "\e90e";
+  color: #898989;
+}
+.icon-cloud:before {
+  content: "\e90f";
+  color: #999;
+}
+.icon-Cloud-disk:before {
+  content: "\e910";
+  color: #999;
+}
+.icon-current:before {
+  content: "\e911";
+  color: #57c7d5;
+}
+.icon-department2:before {
+  content: "\e912";
+  color: #999;
+}
+.icon-down:before {
+  content: "\e913";
+  color: #898989;
+}
+.icon-flag:before {
+  content: "\e914";
+  color: #fc0303;
+}
+.icon-jt:before {
+  content: "\e915";
+  color: #0080cc;
+}
+.icon-jt2:before {
+  content: "\e916";
+  color: #0080cc;
+}
+.icon-management-meetings:before {
+  content: "\e917";
+  color: #999;
+}
+.icon-more:before {
+  content: "\e918";
+  color: #f2a555;
+}
+.icon-Obtain:before {
+  content: "\e919";
+  color: #898989;
+}
+.icon-personnel2:before {
+  content: "\e91a";
+  color: #737373;
+}
+.icon-prohibit:before {
+  content: "\e91b";
+  color: #898989;
+}
+.icon-receiving-department:before {
+  content: "\e91c";
+  color: #737373;
+}
+.icon-search-2:before {
+  content: "\e91d";
+  color: #cac9c8;
+}
+.icon-shelves:before {
+  content: "\e91e";
+  color: #898989;
+}
+.icon-spread:before {
+  content: "\e91f";
+  color: #65c0ed;
+}
+.icon-system:before {
+  content: "\e920";
+  color: #999;
+}
+.icon-the-bottom:before {
+  content: "\e921";
+  color: #898989;
+}
+.icon-the-top:before {
+  content: "\e922";
+  color: #898989;
+}
+.icon-Upward:before {
+  content: "\e923";
+  color: #898989;
+}
+.icon-user-b:before {
+  content: "\e924";
+  color: #89badc;
+}
+.icon-Meeting:before {
+  content: "\e900";
+  color: #82c14a;
+}
+.icon-message:before {
+  content: "\e901";
+  color: #91c36f;
+}
+.icon-news:before {
+  content: "\e902";
+  color: #91c36f;
+}
+.icon-notice:before {
+  content: "\e903";
+  color: #83c146;
+}
+.icon-push:before {
+  content: "\e904";
+  color: #91c36f;
+}
+.icon-yf:before {
+  content: "\e905";
+  color: #8864a8;
+}
+.icon-yms:before {
+  content: "\e906";
+  color: #21aad5;
+}
+.icon-Document:before {
+  content: "\e907";
+  color: #91c36f;
+}
+.icon-dot:before {
+  content: "\e908";
+  color: #65696e;
+}
+.icon-gwt:before {
+  content: "\e909";
+  color: #3e99d5;
+}

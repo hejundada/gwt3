@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>文件管理器</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+		<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+		<link href="css/btn.css" rel="stylesheet">
+		<link href="css/animate.min.css" rel="stylesheet">
+		<link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+		<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+		<link href="css/style.shxy.css" rel="stylesheet">
+		<link href="css/font.css" rel="stylesheet">
+		<link href="js/plugins/layer/laydate/need/laydate.css">
+		<link href="js/plugins/layer/laydate/skin/default/laydate.css">
+	</head>
+
+	<body class="gray-bg">
+		<div class="wrapper wrapper-content">
+			<div class="row">
+				<div class="nav-area">
+					<i class="fa fa-home nav-icon"></i>
+					<a href="#" class="nav-link">首页</a>
+					<span class="nav-break">>></span>
+
+					<span class="nav-position">通知配置</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="ibox float-e-margins">
+						<div class="ibox-title">
+							<span class="title-icon"></span>
+							<span class="title-font">
+    			通知配置
+    		</span>
+						</div>
+						<div class="ibox-content">
+							<div class="m-b-sm">
+
+							<button class="btn btn-addColor  pull-right" type="button"><i class="glyphicon glyphicon-plus"></i>&nbsp;新增类型</button>
+
+							<div class="sort pull-left">
+								<span>排序：</span>
+								<button class="btn btn-info btn-sm btn-M0" type="button"><i class="fa icon-the-top"></i></button>
+								<button class="btn btn-info btn-sm btn-M0" type="button"><i class="fa icon-Upward"></i></button>
+								<button class="btn btn-info btn-sm btn-M0" type="button"><i class="fa icon-down"></i></button>
+								<button class="btn btn-info btn-sm btn-M0" type="button"><i class="fa icon-the-bottom"></i></button>
+							</div>
+						</div>
+							
+							<table class="table table-bordered table-hover dataTables-example dataTable table-onepiece" style="margin-top: 5px;">
+								<thead>
+									<tr>
+										<th class="text-center">选择</th>
+										<th class="text-center">通知类型</th>
+                                        <th class="text-center">更新时间</th>
+                                        <th class="text-center">操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="gradeX text-center">
+										<td><input type="radio" class="radio i-checks" name="reorder" value="option1"></td>
+										<td>会议通知</td>
+										<td>
+											2017-12-13 23:14
+										</td>
+										<td>
+											<button class="btn-table-Operation nowrap" type="button"><i class="fa fa-edit"></i>&nbsp;编辑</button>
+										    <button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button>
+										</td>
+									</tr>
+									<tr class="gradeX text-center">
+										<td><input type="radio" class="radio i-checks" name="reorder" value="option1"></td>
+										<td>督查公报</td>
+										<td>
+											2017-12-11 12:23
+										</td>
+										<td>
+											<button class="btn-table-Operation nowrap" type="button"><i class="fa fa-edit"></i>&nbsp;编辑</button>
+										    <button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button>
+										</td>
+									</tr>
+									<tr class="gradeX text-center">
+										<td><input type="radio" class="radio i-checks" name="reorder" value="option1"></td>
+										<td>意见征集</td>
+										<td>
+											2017-09-11 12:23
+										</td>
+										<td>
+											<button class="btn-table-Operation nowrap" type="button"><i class="fa fa-edit"></i>&nbsp;编辑</button>
+										    <button class="btn-table-Operation demo4" type="button"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</button>
+										</td>
+									</tr>
+									   
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="js/jquery.min.js?v=2.1.4"></script>
+	<script src="js/plugins/iCheck/icheck.min.js"></script><!--单选多选-->
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    	
+	<!--radio样式-->
+	<script>
+		//		sweetalert弹窗
+		$(document).ready(function() {
+			$(".i-checks").iCheck({
+				checkboxClass: "icheckbox_square-mainColor",
+				radioClass: "iradio_square-mainColor",
+			})
+		});
+	</script>
+	<!--radio样式 END-->
+
+</html>

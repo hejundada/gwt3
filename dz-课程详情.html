@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>课程详情</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+<link href="css/btn.css" rel="stylesheet">
+<link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+<link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+<link rel="stylesheet" href="js/plugins/zTree/css/zTreeStyle.css" type="text/css">
+<link href="css/style.shxy.css" rel="stylesheet">
+<link href="css/font.css" rel="stylesheet">
+<link href="css/douzi-style.css" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content  animated fadeInRight article">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+      <div class="ibox">
+        <section class="ibox-content">
+          <div class="text-center article-title m-b-sm">
+            <div  id="signUp2" class="signUp"><img class="animated animation_select" src="img/sign.png">
+              <p class="m-t--25">郭桂峰</p>
+              <p  >2017-10-23 12:23 </p>
+            </div>
+            <div  id="refuse-signUp" class="signUp"><img class="animated animation_select" src="img/refuse-sign.png">
+              <p class="m-t--25">郭桂峰</p>
+              <p  >2017-10-23 12:23 </p>
+            </div>
+            <h2> 
+              <strong>【内部课程】</strong>毛泽东思想与中古哦社会注意制度建立、建设道路的探索</h2>
+          </div>
+          <div class="source">
+            <span class="m-sm" >课程分类：两学一做</span> 
+            <span class="m-sm" >创建部门：XXX部门</span>
+            <time class="m-sm" >2017-11-18 &nbsp;16:00</time>
+
+          </div>
+<div class="dz-content">
+  <div class="ibox-title">
+         <h5>课程简介</h5>
+     </div>
+            <p class="text-indent2 details-txt"> 11月29日，全国重点美术院校学习贯彻习近平新时代文艺思想座谈会在西安美术学院召开。省委常委、省委宣传部部长庄长兴出席开幕式并致辞。</p>
+          </div>
+            <div class="dz-learn">   
+            <span class="m-sm" >已有188人在学习</span>
+            <span class="m-sm" ><button type="button" class="btn btn-w-m btn-primary" onclick="location.href='dz-课程学习.html'">立即学习</button></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--报名--> 
+    
+    <!--报名--> 
+    <!--上传附件--> 
+    
+    <!--上传附件--> 
+  </div>
+</div> 
+<script src="js/jquery.min.js?v=2.1.4"></script> 
+<script src="js/bootstrap.min.js?v=3.3.6"></script> 
+<script src="js/content.min.js?v=1.0.0"></script> 
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="js/plugins/sweetalert/promise.js"></script><!--sweetalert2.0 IE 兼容-->
+<script type="text/javascript" src="js/plugins/zTree/js/jquery.ztree.core.js"></script> 
+<script>
+$(document).ready(function(){
+  $("#addenclosure").click(function(){
+  $("#enclosure").fadeIn();
+  });
+});
+// 显示已签收、已拒签印章*
+$(document).ready(function(){
+  $("#Sign").click(function(){
+  $("#signUp").fadeIn();
+  $("#signUp2").fadeIn();
+ 
+  });
+});
+$(document).ready(function(){
+  $("#refuse-sign").click(function(){
+  $("#refuse-signUp").fadeIn();
+  });
+});
+	// 显示已签收、已拒签印章--END
+		
+//      sweetalert弹窗
+	
+$(".demo3").click(function() {
+				 event.stopPropagation();
+		// inputOptions can be an object or Promise
+var inputOptions = new Promise(function(resolve) {
+  setTimeout(function() {
+    resolve({
+      '#ff0000': '涉密信息',
+      '#00ff00': '非法信息',
+      '#0000ff': '其它'
+    });
+  });
+});
+swal({
+  title: '举报信息',
+  text: '请选择举报类型',
+  input: 'radio',
+  inputOptions: inputOptions,
+	html: '<input id="swal-input2" type="textarea" placeholder="请输入举报原因" class="swal2-textarea">',
+  inputValidator: function(result) {
+    return new Promise(function(resolve, reject) {
+      if (result) {
+        resolve();
+      } else {
+        reject('请选择举报类型!');
+      }
+    });
+  }
+}) /*.then(function(result) {
+  if (result) {
+    swal({
+		title: '举报原因',
+      input: 'textarea',
+  showCancelButton: true
+    });
+  }
+})*/ .then(function(result) {
+  if (result) {
+    swal({
+      type: 'success',
+      text: '举报成功！'
+    });
+  }
+})
+});
+	
+$(".demo2").click(function() {
+	event.stopPropagation();
+	swal({
+  title: '举报',
+  html:
+   '<span class="Report-m">请选择类型：</span>' + '<input id="swal-input1" type="radio" class="swal2-radio" autofocus>'+ '<span  class="Report-m">涉密信息</span>' +'<input id="swal-input1" type="radio" class="swal2-radio" autofocus>' +'<span class="Report-m">非法内容</span>' +'<input id="swal-input1" type="radio"   class="swal2-radio" autofocus>' +'<span  class="Report-m">其他</span>' +
+    '<input id="swal-input2" placeholder="请输入举报原因" type="textarea" class="swal2-textarea">',
+  preConfirm: function() {
+    return new Promise(function(resolve) {
+      if (result) {
+        resolve([
+          $('#swal-input1').val(),
+          $('#swal-input2').val()
+        ]);
+      }
+    });
+  }
+}).then(function(result) {
+  if (result) {
+    swal(JSON.stringify(result));
+  }
+})
+/*swal({
+	html:"<div class=''><ul><li><span>举报原因:</span> <input type='radio'><span>非法信息系</span></li><li><span>举报原因:</span> <input type='textarea'><span>非法信息系</span></li></ul></div>",
+  title: 'Terms and conditions',
+  inputPlaceholder:
+    'I agree with the terms and conditions',
+  inputPlaceholderValue:3,
+  input: 'checkbox',
+  inputValue: 1,
+  confirmButtonText:
+    'Continue <i class="fa fa-arrow-right></i>',
+  inputValidator: function(result) {
+    return new Promise(function(resolve, reject) {
+      if (result) {
+        resolve();
+      } else {
+        reject('You need to agree with T&C');
+      }
+    });
+  }
+}).then(function(result) {
+  if (result) {
+    swal({
+      type: 'success',
+      text: 'You agreed with T&C :)'
+    });
+  }
+})*/
+});	
+$(document).ready(function() {
+$(".demo4").click(function() {
+				 event.stopPropagation();
+		swal({
+          title: '请输入拒签理由',
+          input: 'text',
+          showCancelButton: true,
+          inputValidator: function(value) {
+    return new Promise(function(resolve, reject) {
+      if (value) {
+        resolve();
+      } else {
+        reject('请输入拒签理由，此为必填项！');
+      }
+    });
+  }
+}).then(function(result) {
+  if (result) {
+    swal({
+      type: 'success',
+	  title: "拒签成功",
+      html: '拒签理由: ' + result,
+	  showConfirmButton: false,
+	  timer: 1500
+    });
+  }
+})
+				
+			});
+		});
+//      sweetalert弹窗 END
+</script> 
+<SCRIPT type="text/javascript">
+		//	    ztree树结构
+		var curMenu = null,
+			zTree_Menu = null;
+		var setting = {
+			check: {
+				enable: true
+			},
+			view: {
+				showLine: false,
+				showIcon: false,
+				selectedMulti: false,
+				dblClickExpand: false,
+				addDiyDom: addDiyDom
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeClick: beforeClick
+			}
+		};
+
+		var zNodes = [{
+				id: 1,
+				pId: 0,
+				name: "陕西省",
+				open: true
+			},
+			{
+				id: 11,
+				pId: 1,
+				name: "省政府办公厅"
+			},
+			{
+				id: 12,
+				pId: 1,
+				name: "省开发委"
+			},
+			{
+				id: 13,
+				pId: 1,
+				name: "省教育厅"
+			},
+			{
+				id: 111,
+				pId: 12,
+				name: "陕西省体育局"
+			},
+			{
+				id: 112,
+				pId: 13,
+				name: "陕西省民政局"
+			},
+			{
+				id: 113,
+				pId: 11,
+				name: "陕西省卫生局"
+			},
+			{
+				id: 114,
+				pId: 113,
+				name: "陕西省教育局"
+			},
+			{
+				id: 3,
+				pId: 0,
+				name: "西安市碑林区"
+			},
+			{
+				id: 31,
+				pId: 3,
+				name: "碑林区区政府"
+			},
+			{
+				id: 32,
+				pId: 3,
+				name: "碑林区民政局"
+			}
+		];
+
+		function addDiyDom(treeId, treeNode) {
+			var spaceWidth = 5;
+			var switchObj = $("#" + treeNode.tId + "_switch"),
+				icoObj = $("#" + treeNode.tId + "_ico");
+			switchObj.remove();
+			icoObj.before(switchObj);
+
+			if(treeNode.level > 1) {
+				var spaceStr = "<span style='display: inline-block;width:" + (spaceWidth * treeNode.level) + "px'></span>";
+				switchObj.before(spaceStr);
+			}
+		}
+
+		function beforeClick(treeId, treeNode) {
+			if(treeNode.level == 0) {
+				var zTree = $.fn.zTree.getZTreeObj("treeDemo1");
+				zTree.expandNode(treeNode);
+				return false;
+			}
+			return true;
+		}
+
+		function beforeClick(treeId, treeNode) {
+			if(treeNode.level == 0) {
+				var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+				zTree.expandNode(treeNode);
+				return false;
+			}
+			return true;
+		}
+		$(document).ready(function() {
+			var treeObj = $("#treeDemo1");
+			$.fn.zTree.init(treeObj, setting, zNodes);
+			zTree_Menu = $.fn.zTree.getZTreeObj("treeDemo1");
+			curMenu = zTree_Menu.getNodes()[0].children[0].children[0];
+			zTree_Menu.selectNode(curMenu);
+
+			treeObj.hover(function() {
+				if(!treeObj.hasClass("showIcon")) {
+					treeObj.addClass("showIcon");
+				}
+			}, function() {
+				treeObj.removeClass("showIcon");
+			});
+		});
+
+		$(document).ready(function() {
+			var treeObj = $("#treeDemo");
+			$.fn.zTree.init(treeObj, setting, zNodes);
+			zTree_Menu = $.fn.zTree.getZTreeObj("treeDemo");
+			curMenu = zTree_Menu.getNodes()[0].children[0].children[0];
+			zTree_Menu.selectNode(curMenu);
+
+			treeObj.hover(function() {
+				if(!treeObj.hasClass("showIcon")) {
+					treeObj.addClass("showIcon");
+				}
+			}, function() {
+				treeObj.removeClass("showIcon");
+			});
+		});
+		//		ztree树结构 END
+
+	
+	</SCRIPT>
+</body>
+</html>

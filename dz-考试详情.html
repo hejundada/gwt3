@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>考试详情</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+<link href="css/btn.css" rel="stylesheet">
+<link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+<link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+<link href="css/style.shxy.css" rel="stylesheet">
+<link href="css/font.css" rel="stylesheet">
+<link rel="stylesheet" href="js/plugins/zTree/css/zTreeStyle.css" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="js/plugins/Calendar/stylesheets/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+<link href="css/douzi-style.css" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="ibox float-e-margins animated fadeInRight">
+        <div class="ibox-title"> <span class="title-icon"></span> <span class="title-font"> 考试详情</span> </div>
+        <div class="ibox-content" >
+          <!-- 新增题库按钮 -->
+        <ul class="m-t m-b-sm">  
+          <li class="col-sm-12 m-b-sm gray-line">
+          <button class="btn btn-addColor  pull-right" type="button"><i class="glyphicon glyphicon-plus"></i>&nbsp;创建试卷</button>
+          </li>
+        </ul>
+          <!-- 新增题库按钮 -->
+
+        <!--   考试详情 -->
+        <div class="dz-detail">
+         <ul>
+           <li><b>试卷名称:</b><span>测试部第一次考试</span></li>
+           <li><b>截止时间:</b><span>2017.04.27&nbsp;&nbsp;18：30</span></li>
+           <li><b>考试时长:</b><span>120分钟</span></li>
+           <li><b>卷面总分:</b><span>100分</span></li>
+         </ul>
+        </div>
+        <!--   考试详情-结尾 -->
+
+
+          <!--列表-->
+          
+          <table class="table table-bordered table-hover dataTables-example dataTable table-onepiece" >
+            <thead>
+              <tr>
+                <th class="text-center">姓名</th>
+                <th class="text-center">部门</th>
+                <th class="text-center">考试时间</th>
+                <th class="text-center">批改时间</th>
+                <th class="text-center">批改状态</th>
+                <th class="text-center">得分</th>
+                <th class="text-center">操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="gradeX text-center" style="cursor: pointer;" >
+                <td>
+                 罗安定
+                </td>
+                <td>市场部</td>
+                <td>2017-12-13 23:14</td>
+                <td>2017-12-15 23:14</td>
+                <td>未批改</td>
+                <td>-</td>
+                  <td>
+                  <button class="btn-table-Operation nowrap" type="button"><i class="fa fa-edit"></i>&nbsp;批改试卷</button>
+                  <button class="btn-table-Operation" type="button"><i class="fa fa-bars"></i>&nbsp;试卷详情</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" >
+                <td>
+                 罗安定
+                </td>
+                <td>市场部</td>
+                <td>2017-12-13 23:14</td>
+                <td>2017-12-15 23:14</td>
+                <td>已批改</td>
+                <td>90</td>
+                  <td>
+                  <button class="btn-table-Operation nowrap" type="button"><i class="fa fa-edit"></i>&nbsp;批改试卷</button>
+                  <button class="btn-table-Operation" type="button"><i class="fa fa-bars"></i>&nbsp;试卷详情</button></td>
+              </tr>
+              <tr class="gradeX text-center" style="cursor: pointer;" >
+                <td>
+                 罗安定
+                </td>
+                <td>市场部</td>
+                <td>2017-12-13 23:14</td>
+                <td>2017-12-15 23:14</td>
+                <td>已批改</td>
+                <td>90
+
+
+                </td>
+                  <td>
+                  <button class="btn-table-Operation nowrap" type="button"><i class="fa fa-edit"></i>&nbsp;批改试卷</button>
+                  <button class="btn-table-Operation" type="button"><i class="fa fa-bars"></i>&nbsp;试卷详情</button></td>
+              </tr>
+            </tbody>
+          </table>
+          
+            <ul id="sysAppItemPage" class="pagination">
+               <li class="page-item first disabled pull-right"><a href="#" class="page-link">尾页</a></li>
+              <li class="page-item next disabled pull-right"><a href="#" class="page-link">下一页</a></li>
+              <li class="page-item active pull-right"> <a href="#" class="page-link">5</a> </li>
+              <li class="page-item pull-right"> <a href="#" class="page-link">4</a> </li>
+              <li class="page-item pull-right"> <a href="#" class="page-link">3</a> </li>
+              <li class="page-item pull-right"> <a href="#" class="page-link">2</a> </li>
+              <li class="page-item pull-right"> <a href="#" class="page-link pull-right">1</a> </li>
+              <li class="page-item prev disabled pull-right"><a href="#" class="page-link">上一页</a></li>
+             
+              <li class="page-item last disabled pull-right"><a href="#" class="page-link">首页</a></li>
+            </ul>
+         
+          <!--列表 END--> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 创建题库-弹窗 -->
+<div class="modal inmodal in" id="myModal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none; padding-right: 6px;">
+      <div class="modal-dialog-600">
+        <div class="modal-content animated fadeIn">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span> </button>
+            <!--<i class="fa fa-laptop modal-icon"></i>-->
+            <h4 class="modal-title">创建题库</h4>
+            <!--<small class="font-bold">这里可以显示副标题。</small>-->
+          </div>
+          <div class="modal-body">
+            <div class="modal-content-m">
+              <form method="get" class="form-horizontal">
+                <div class="form-group">
+                  <label class="col-sm-2 control-label"><span class="red">*&nbsp;</span>题库名称</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label"><span class="red">*&nbsp;</span>题库状态</label>
+                  <div class="col-sm-10">
+                    <select class="form-control" name="account">
+                      <option>公开</option>
+                      <option>内部</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">说明</label>
+                  <div class="col-sm-10">
+                    <textarea type="text" class="form-control"></textarea>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-mainColor demo1" data-dismiss="modal">确定</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- 创建题库-弹窗 -->
+</body>
+<script type="text/javascript" src="js/plugins/Calendar/javascripts/simple-calendar.js"></script>
+<script>
+     var myCalendar = new SimpleCalendar('#calendar');
+    </script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>
+<script src="js/content.min.js?v=1.0.0"></script>
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="js/plugins/chosen/chosen.jquery.js"></script>
+<script type="text/javascript" src="js/plugins/zTree/js/jquery.ztree.core.js"></script>
+<script>
+		
+//		radio样式
+		$(document).ready(function() {
+			$(".i-checks").iCheck({
+				checkboxClass: "icheckbox_square-mainColor",
+				radioClass: "iradio_square-mainColor",
+			})
+		});
+//		radio样式 END
+
+//      sweetalert弹窗
+	
+$(document).ready(function() {
+			$(".demo4").click(function() {
+				 event.stopPropagation();
+				swal({
+                        title: "您确定要删除这条信息吗",
+						text: "删除后将无法恢复，请谨慎操作！",
+						type: "warning",
+						showCancelButton: true,
+						confirmButtonColor: "#DD6B55",
+						confirmButtonText: "是的，我要删除！",
+						cancelButtonText: "让我再考虑一下…",
+						closeOnConfirm: false,
+						closeOnCancel: false,
+                     }).then(function(isConfirm) {
+                  if (isConfirm) {
+                  swal({
+      type: 'success',
+	  title: "删除成功",
+	  text: "您已永久删除本条信息",
+		 showConfirmButton: false,
+	  timer: 1500
+    });
+  }
+})
+				
+			});
+		});
+//      sweetalert弹窗 END
+</script>
+<script src="js/plugins/layer/laydate/laydate.js"></script>
+<script>
+        laydate({elem:"#hello",event:"focus"});var start={elem:"#start",format:"YYYY/MM/DD hh:mm:ss",min:laydate.now(),max:"2099-06-16 23:59:59",istime:true,istoday:false,choose:function(datas){end.min=datas;end.start=datas}};var end={elem:"#end",format:"YYYY/MM/DD hh:mm:ss",min:laydate.now(),max:"2099-06-16 23:59:59",istime:true,istoday:false,choose:function(datas){start.max=datas}};laydate(start);laydate(end);
+    </script>
+</html>
